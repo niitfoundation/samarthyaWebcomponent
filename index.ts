@@ -1,0 +1,3 @@
+import {CandidateSamarthyaWebComponentsModuleAvatar} from './samarthya.webcomponents.module'
+
+export CandidateSamarthyaWebComponentsModuleAvatar
