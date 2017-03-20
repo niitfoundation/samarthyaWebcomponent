@@ -5,7 +5,7 @@
 <div>
   <div fxLayout="row">
     <div [attr.for]="element.key" class="title">{{element.label}}</div>
-    <a href="#"  class="editBtn" class="editBtn" (click)="getElement(element)">
+    <a href="#" class="editBtn" class="editBtn" (click)="onEdit(editDialog,element)">
       <i class="material-icons">mode_edit</i>
     </a>
     <!--<div [attr.for]="element.info">{{element.info}}</div>-->
@@ -68,5 +68,15 @@
         <input mdInput name="componentProperty" [(ngModel)]="componentProperty" type="text" placeholder="Name">
       </md-input-container>
     </div>
+
   </div>
 </div>
+
+
+<!--dialog box-->
+<md2-dialog #editDialog>
+  <md2-dialog-title>{{element.label}}</md2-dialog-title>
+  <div>
+    {{element.options[0].data}}
+  </div>
+</md2-dialog>
