@@ -3,8 +3,6 @@ import { SamDynamicViewComponent } from './sam-dynamic-section/sam-dynamic-view/
 import { SamProfileSectionComponent } from './sam-profile/sam-profile-section/sam-profile-section.component';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from '@angular/material';
-import { CandidateAvatar } from './candidates/candidateavatar.component';
-import { ProfileComponent } from './profile/profile.component';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,15 +21,11 @@ import { Md2Module } from 'md2';
 		FlexLayoutModule,
 	],
 	declarations: [
-		CandidateAvatar,
-		ProfileComponent,
 		SamProfileSectionComponent,
 		SamDynamicViewComponent,
 		SamDynamicElementComponent
 	],
 	exports: [
-		CandidateAvatar,
-		ProfileComponent,
 		SamProfileSectionComponent,
 		SamDynamicViewComponent,
 		SamDynamicElementComponent
