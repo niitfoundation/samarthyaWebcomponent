@@ -8,6 +8,5 @@ export class SamDynamicIconDiv extends SamDynamicElementBase<string> {
     constructor(options: {} = {}) {
         super(options);
         this.options = options['options'] || [];
-
     }
 }

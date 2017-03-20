@@ -9,4 +9,4 @@ export class SamDynamicDiv extends SamDynamicElementBase<string> {
         super(options);
         this.options = options['options'] || [];
     }
-    }
+}

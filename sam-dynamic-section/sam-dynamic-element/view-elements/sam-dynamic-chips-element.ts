@@ -9,4 +9,4 @@ export class SamDynamicChips extends SamDynamicElementBase<string> {
         super(options);
         this.options = options['options'] || [];
     }
-    }
+}

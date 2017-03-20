@@ -1,12 +1,9 @@
-<p>
-    sam-dynamic-view works!
-</p>
-<p>
-    <p>
-        <div *ngFor="let element of elements" class="form-row">
-            <md-card style="margin-bottom: 10px;margin-top:10px;">
-
-                <app-sam-dynamic-element [element]="element"></app-sam-dynamic-element>
-            </md-card>
-
-        </div>
+<!--<p>
+  sam-dyna-view works!
+Dynamic form  component (ROOT)
+</p>-->
+<div fxLayout="row" fxLayoutWrap>
+    <md-card *ngFor="let element of elements" class="card" fxFlex>
+        <sam-dynamic-element [element]="element"></sam-dynamic-element>
+    </md-card>
+</div>

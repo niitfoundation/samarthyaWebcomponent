@@ -2,14 +2,11 @@ import { SamDynamicElementComponent } from './sam-dynamic-section/sam-dynamic-el
 import { SamDynamicViewComponent } from './sam-dynamic-section/sam-dynamic-view/sam-dynamic-view.component';
 import { SamProfileSectionComponent } from './sam-profile/sam-profile-section/sam-profile-section.component';
 import { NgModule } from '@angular/core';
-// import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { CandidateAvatar } from './candidates/candidateavatar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { FlexLayoutModule } from '@angular/flex-layout';
-// import { Md2Module } from 'md2';
 import { BrowserModule } from '@angular/platform-browser';
 import 'hammerjs';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -21,9 +18,9 @@ import { Md2Module } from 'md2';
 		FormsModule,
 		HttpModule,
 		MaterialModule.forRoot(),
-		// Md2Module.forRoot(),
+		Md2Module.forRoot(),
 		ReactiveFormsModule,
-		// FlexLayoutModule,
+		FlexLayoutModule,
 	],
 	declarations: [
 		CandidateAvatar,
@@ -32,7 +29,6 @@ import { Md2Module } from 'md2';
 		SamDynamicViewComponent,
 		SamDynamicElementComponent
 	],
-
 	exports: [
 		CandidateAvatar,
 		ProfileComponent,
