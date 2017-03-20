@@ -1,3 +1,3 @@
-import {SamarthyaWebComponentsModule} from './samarthya.webcomponents.module'
+import { SamarthyaWebComponentsModule } from './samarthya.webcomponents.module'
 
-export {SamarthyaWebComponentsModule}
+export { SamarthyaWebComponentsModule }

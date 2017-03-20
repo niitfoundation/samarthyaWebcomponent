@@ -6,40 +6,38 @@ import { SamProfileSectionService } from './../sam-profile-section.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sam-profile-section',
-  templateUrl: './sam-profile-section.component.html',
-  styleUrls: ['./sam-profile-section.component.css']
+    selector: 'app-sam-profile-section',
+    templateUrl: './sam-profile-section.component.html',
+    styleUrls: ['./sam-profile-section.component.css']
 })
 export class SamProfileSectionComponent implements OnInit {
-elements : any[];
- 
+    elements: any[];
 
-    
-  constructor() { 
-    //call the service and use the elements
+    constructor() {
+    }
+    ngOnInit() {
+        this.elements = this.getElements();
+    }
 
-  }
-  
+    getElements() {
 
-  ngOnInit() {
-    //response from service hard code it.
-    this.elements = this.getElements();
-   }
+        const elementStandard: SamDynamicElementBase<any>[] = [
+            new SamDynamicIconDiv({
+                key: this.getPersonalInfo().key,
+                label: this.getPersonalInfo().lable,
+                order: this.getPersonalInfo().order,
+                options: this.getPersonalInfo().options
+            }),
+        ];
 
-  getElements() {
+        return elementStandard.sort((a, b) => a.order - b.order);
+    }
 
-    let elementStandard: SamDynamicElementBase<any>[] = [
-      new SamDynamicIconDiv({
-        key: this.getPersonalInfo().key,
-        label: this.getPersonalInfo().lable,
-        order: this.getPersonalInfo().order,
-        options: this.getPersonalInfo().options
-      })
-    ]
-      return elementStandard ;
-  }
-  public userData = {
-       
+
+
+
+    public userData = {
+
         "personalinfo": {
             "name": "Muruguavel A",
             "fname": "Murugavel",
@@ -84,8 +82,8 @@ elements : any[];
             "pic": "http://profilepicurl",
             "center": "",
         }
-  }
-  getPersonalInfo() {
+    }
+    getPersonalInfo() {
         return {
             key: "personalinfo",
             lable: "Personal Info",
@@ -101,7 +99,7 @@ elements : any[];
             ]
         }
     }
-  }
+}
 
 
 
