@@ -1,3 +1,14 @@
+.profileCard{
+    margin: auto;
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 450px;
+    background-color: gray;
+    margin-top: 10px;
+}
+.profilePage{
+    margin:25px;
+}
 .card
 {
     margin: 10px 5px 10px 5px;

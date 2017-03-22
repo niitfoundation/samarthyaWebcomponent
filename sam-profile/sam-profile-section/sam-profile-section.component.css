@@ -1,11 +1,15 @@
-.profileCard{
-    margin: auto;
-    max-width: 300px;
+.card
+{
+    margin: 10px 5px 10px 5px;
     min-width: 300px;
-    min-height: 450px;
-    background-color: gray;
-    margin-top: 10px;
+    /*margin: auto;*/
 }
-.profilePage{
-    margin:25px;
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardTest{
+
+    margin: 10px 5px 10px 5px;
+    /*width: 300px;*/
 }

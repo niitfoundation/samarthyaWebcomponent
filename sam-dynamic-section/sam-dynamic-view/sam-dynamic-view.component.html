@@ -1,9 +1,4 @@
-<!--<p>
-  sam-dyna-view works!
-Dynamic form  component (ROOT)
-</p>-->
-<div fxLayout="row" fxLayoutWrap>
-    <md-card *ngFor="let element of elements" class="card" fxFlex>
-        <sam-dynamic-element [element]="element"></sam-dynamic-element>
-    </md-card>
+<!--Looping through the elements to get each element-->
+<div *ngFor="let element of elements">
+  <sam-dynamic-element [element]="element"></sam-dynamic-element>
 </div>

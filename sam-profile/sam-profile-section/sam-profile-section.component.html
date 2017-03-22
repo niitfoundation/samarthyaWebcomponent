@@ -1,3 +1,16 @@
 <!--Profile sections dynamic -->
-<sam-dynamic-view [elements]="elements">
-</sam-dynamic-view> 
+<!--One Section shown in one card-->
+
+<!--<div fxLayout="row" fxLayoutWrap>-->
+<md-card class="card" fxFlex>
+    <!--title of the Sections-->
+
+    <md-card-title>{{elements.title}}</md-card-title>
+    <md-card-content>
+
+        <!--data of the Sections-->
+
+        <sam-dynamic-view [elements]="elements.data"> </sam-dynamic-view>
+    </md-card-content>
+</md-card>
+<!--</div>-->

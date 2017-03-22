@@ -1,12 +1,12 @@
 import { SamDynamicElementBase } from './../sam-dynamic-element-base';
 
 export class SamDynamicChips extends SamDynamicElementBase<string> {
-    controlType = 'chips';
+    elemType = 'chips';
 
-    options: { data: string }[] = [];
+    dataObj: { name: string, data: string }[] = [];
 
-    constructor(options: {} = {}) {
-        super(options);
-        this.options = options['options'] || [];
+    constructor(dataObj: {} = {}) {
+        super(dataObj);
+        this.dataObj = dataObj['dataObj'] || [];
     }
 }

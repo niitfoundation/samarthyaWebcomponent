@@ -19,7 +19,7 @@ export class SamDynamicElementComponent implements OnInit {
   ngOnInit() { }
 
   onEdit(dialog: Md2Dialog, cardData: any) {
-    console.log(cardData);
+    // console.log(cardData);
     dialog.open();
   }
 }

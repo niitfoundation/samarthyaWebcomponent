@@ -1,82 +1,84 @@
-<!--<p>
-  sam-dyna-element works! dynamic form HTML for multiple sam-dyna-element for switch cases
-</p>-->
+<!--Display Rows for Title-->
+<!--<div fxLayout="row">
+  <div [attr.for]="element.elemName" class="title">{{element.elemLabel}}</div>
+  <a href="#" class="editBtn" class="editBtn" (click)="onEdit(editDialog,element)">
+    <i class="material-icons">mode_edit</i>
+  </a>-->
+<!--<div [attr.for]="element.info">{{element.info}}</div>-->
+<!--</div>-->
 
-<div>
-  <div fxLayout="row">
-    <div [attr.for]="element.key" class="title">{{element.label}}</div>
-    <a href="#" class="editBtn" class="editBtn" (click)="onEdit(editDialog,element)">
-      <i class="material-icons">mode_edit</i>
-    </a>
-    <!--<div [attr.for]="element.info">{{element.info}}</div>-->
+<!--Testing Code==============================-->
+
+
+<!--switch case for selecting element type-->
+<div [ngSwitch]="element.elemType">
+
+  <!--lables with icons-->
+  <div *ngSwitchCase="'iconDiv'">
+    <div fxLayout="row" class="elements">
+      <div fxFlex="40px" class="">
+        <i class="material-icons">{{element.dataObj.icon}}</i>
+      </div>
+      <div fxFlex class="dataText">
+        {{element.dataObj.data}}
+      </div>
+    </div>
   </div>
-  <div [ngSwitch]="element.controlType">
 
-    <!--lables with icons-->
-    <div *ngSwitchCase="'iconDiv'">
-      <div *ngFor="let opt of element.options">
-        <div fxLayout="row" class="elements">
-          <div fxFlex="40px" class="dataText">
-            <i class="material-icons">{{opt.icon}}</i>
-          </div>
-          <div fxFlex class="dataText">
-            {{opt.data}}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--data in chips-->
-    <div *ngSwitchCase="'chips'">
-      <md-chip-list>
-        <md-chip *ngFor="let opt of element.options" selected="true" color="accent" class="chips" title='{{opt.data}} yr'>
-          <div class="chips"> {{opt.name}}</div>
-        </md-chip>
-      </md-chip-list>
-    </div>
-
-
-    <!--lable with title-->
-    <div *ngSwitchCase="'titleDiv'">
-      <div *ngFor="let opt of element.options">
-        <div fxLayout="row" class="elements">
-          <div fxFlex="10" class="dataText">
-            {{opt.title}}
-          </div>
-          <div fxFlex></div>
-          <div fxFlex="90" class="dataText">
-            {{opt.data}}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--plain div-->
-    <div *ngSwitchCase="'div'">
-      <div *ngFor="let opt of element.options">
-        <div fxLayout="row" class="elements">
-          <div class="dataText">
-            {{opt.data}}
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div *ngSwitchCase="'input'">
-      <md-input-container>
-        <input mdInput name="componentProperty" [(ngModel)]="componentProperty" type="text" placeholder="Name">
-      </md-input-container>
-    </div>
-
+  <!--data in chips-->
+  <div *ngSwitchCase="'chips'">
+    <md-chip-list>
+      <md-chip selected="true" color="accent" class="chips" title='{{element.dataObj.data}} yr'>
+        <div class="chips">{{element.dataObj.name}}</div>
+      </md-chip>
+    </md-chip-list>
   </div>
+
+
+  <!--lable with title-->
+  <div *ngSwitchCase="'titleDiv'">
+    <div fxLayout="row" class="elements">
+      <div fxFlex="10" class="dataText">
+        {{element.dataObj.title}}
+      </div>
+      <div fxFlex></div>
+      <div fxFlex="90" class="dataText">
+        {{element.dataObj.data}}
+      </div>
+    </div>
+  </div>
+
+  <!--plain div-->
+  <div *ngSwitchCase="'div'">
+    <div fxLayout="row" class="elements">
+      <div class="dataText">
+        {{element.dataObj.data}}
+      </div>
+    </div>
+  </div>
+
+
+  <!--input box-->
+  <div *ngSwitchCase="'input'">
+    <md-input-container>
+      <input mdInput [(ngModel)]="element.elemName" type="element.type" placeholder="element.elemLabel">
+    </md-input-container>
+  </div>
+
+
+  <!--label div-->
+  <div fxLayout="row" class="elements">
+    <div fxFlex="10" class="dataText">
+      {{element.dataObj.title}}
+    </div>
+  </div>
+
 </div>
 
-
 <!--dialog box-->
-<md2-dialog #editDialog>
-  <md2-dialog-title>{{element.label}}</md2-dialog-title>
+<!--<md2-dialog #editDialog>
+  <md2-dialog-title>{{element.elemLabel}}</md2-dialog-title>
   <div>
-    {{element.options[0].data}}
+    {{element.sectionViewData[0].data}}
   </div>
-</md2-dialog>
+</md2-dialog>-->

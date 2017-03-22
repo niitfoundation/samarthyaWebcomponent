@@ -1,12 +1,12 @@
 import { SamDynamicElementBase } from './../sam-dynamic-element-base';
 
 export class SamDynamicIconDiv extends SamDynamicElementBase<string> {
-    controlType = 'iconDiv';
+    elemType = 'iconDiv';
 
-    options: { icon: string, data: string }[] = [];
+    dataObj: { icon: string, data: string }[] = [];
 
-    constructor(options: {} = {}) {
-        super(options);
-        this.options = options['options'] || [];
+    constructor(dataObj: {} = {}) {
+        super(dataObj);
+        this.dataObj = dataObj['dataObj'] || [];
     }
 }

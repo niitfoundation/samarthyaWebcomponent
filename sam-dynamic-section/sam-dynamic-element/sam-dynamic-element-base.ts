@@ -1,27 +1,27 @@
 export class SamDynamicElementBase<T>{
   value: T;
-  key: string;
-  label: string;
-  info: string;
+  elemName: string;//key  
+  elemLabel: string;//label
   required: boolean;
   order: number;
-  controlType: string;
+  elemType: string;//controlType
+  dataObj: Object;
 
-  constructor(options: {
+  constructor(sectionViewData: {
     value?: T,
-    key?: string,
-    label?: string,
-    info?: string,
+    elemName?: string,
+    elemLabel?: string,
     required?: boolean,
     order?: number,
-    controlType?: string
+    elemType?: string,
+    dataObj?: Object
   } = {}) {
-    this.value = options.value;
-    this.key = options.key || '';
-    this.label = options.label || '';
-    this.info = options.info || '';
-    this.required = !!options.required;
-    this.order = options.order === undefined ? 1 : options.order;
-    this.controlType = options.controlType || '';
+    this.value = sectionViewData.value;
+    this.elemName = sectionViewData.elemName || '';
+    this.elemLabel = sectionViewData.elemLabel || '';
+    this.required = !!sectionViewData.required;
+    this.order = sectionViewData.order === undefined ? 1 : sectionViewData.order;
+    this.elemType = sectionViewData.elemType || '';
+    this.dataObj = sectionViewData.dataObj || '';
   }
 }
