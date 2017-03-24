@@ -8,6 +8,7 @@ import { Md2Dialog } from 'md2'
   styleUrls: ['./sam-dynamic-element.component.css'],
   providers: [Md2Dialog]
 })
+
 export class SamDynamicElementComponent implements OnInit {
 
   @Input() element: SamDynamicElementBase<any>;
@@ -19,7 +20,6 @@ export class SamDynamicElementComponent implements OnInit {
   ngOnInit() { }
 
   onEdit(dialog: Md2Dialog, cardData: any) {
-    // console.log(cardData);
     dialog.open();
   }
 }

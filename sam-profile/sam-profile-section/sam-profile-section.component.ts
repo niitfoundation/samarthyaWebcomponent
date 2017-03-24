@@ -9,11 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SamProfileSectionComponent implements OnInit {
 
   elements: any[];
+  alignElement: string;
   @Input() section: SamDynamicElementBase<any>[] = [];
+  @Input() sectionTitle: string;
+  @Input() align: string;
 
   constructor() {
   }
   ngOnInit() {
     this.elements = this.section;
+    this.alignElement = this.align;
   }
 }

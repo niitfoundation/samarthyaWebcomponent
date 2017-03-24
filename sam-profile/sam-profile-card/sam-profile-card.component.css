@@ -1,0 +1,62 @@
+.right {
+  padding-right: 10px;
+  float: right;
+  margin: 5px;
+}
+
+md-card {
+  top: 100px;
+  width: 300px;
+  margin: auto;
+  color: dimgray;
+}
+
+@media(min-width:10px){
+md-card
+{
+     width: 250px;
+}
+}
+@media(min-width:330px){
+md-card
+{
+     width: 300px;
+}
+}
+
+.name {
+  font-size: 35px;
+  font-weight: bold;
+  color: dimgray;
+  text-shadow: 0px 0px 2px gray;
+  padding: 20px;
+}
+
+
+.img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin-top: -100px;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.material-icons {
+  color: dimgray;
+  font-size: 18px;
+}
+
+md-chip {
+  min-width: 80px;
+  text-align: center;
+  margin: 1px;
+}

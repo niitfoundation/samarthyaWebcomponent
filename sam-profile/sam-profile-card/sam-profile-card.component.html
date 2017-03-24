@@ -1,0 +1,114 @@
+<md-card class="card">
+  <md-card-title class="center">
+    <!-- here’s the avatar -->
+    <img src={{cardData.profilepic}} class="img">
+
+    <!-- the username -->
+    <div class="name" title="User Name">
+      {{cardData.name}}
+    </div>
+  </md-card-title>
+  <hr>
+  <div fxLayout="row">
+
+    <!--profession-->
+    <div fxFlex="9" class="text">
+      <i class="material-icons">business_center</i>
+    </div>
+    <div fxFlex="25" class="text">
+      {{cardData.profession}}
+    </div>
+
+    <!--Role-->
+    <div fxFlex="9" class="text">
+      <i class="material-icons">event_available</i>
+    </div>
+    <div fxFlex class="text">
+      {{cardData.role}}
+    </div>
+  </div>
+  <br>
+
+  <!--experience-->
+  <div fxLayout="row">
+    <div fxFlex="9" class="text"><i class="material-icons">work</i>
+    </div>
+    <div fxFlex="25" class="text">
+      {{cardData.experience}} yr
+    </div>
+
+
+    <!--currentCompany-->
+    <div fxFlex="9" class="text">
+      <i class="material-icons">business</i>
+    </div>
+    <div fxFlex class="text">
+      {{cardData.currentCompany}}
+    </div>
+  </div>
+  <hr>
+
+  <!--second row-->
+  <div fxLayout="row">
+
+    <!--location-->
+    <div fxFlex="9" class="text">
+      <i class="material-icons">location_on</i>
+    </div>
+    <div fxFlex="91" class="text">
+      {{cardData.location}}
+    </div>
+  </div>
+  <br>
+
+  <!--email-->
+  <div fxLayout="row">
+    <div fxFlex="9" class="text">
+      <i class="material-icons">email</i>
+    </div>
+    <div fxFlex="91" class="text">
+      {{cardData.email}}
+    </div>
+  </div>
+  <br>
+
+  <!--Phone No.-->
+  <div fxLayout="row">
+    <div fxFlex="9" class="text"><i class="material-icons">call</i>
+    </div>
+    <div fxFlex="91" class="text">
+      {{cardData.mobileNumber}}
+    </div>
+  </div>
+  <hr>
+
+  <!--skills set-->
+  <div fxLayout="row">
+    <div fxFlex="9" class=" chipsIcon text">
+      <i class="material-icons">library_books</i>
+    </div>
+    <div fxFlex="91">
+      <div class="text chips" fxLayout="row" fxLayoutWrap>
+        <md-chip-list class="mat-chip-list-stacked" fxFlex>
+          <md-chip *ngFor="let skill of cardData.skills">
+            <div fxFlex>{{skill.name}}
+            </div>
+          </md-chip>
+        </md-chip-list>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <!-- action buttons for share and file_download -->
+  <md-card-actions>
+    <div fxLayoutAlign="end">
+      <a md-icon-button>
+        <i class="material-icons">share</i>
+      </a>
+      <a md-icon-button>
+        <i class="material-icons">file_download</i>
+      </a>
+    </div>
+  </md-card-actions>
+</md-card>

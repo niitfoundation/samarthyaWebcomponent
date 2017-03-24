@@ -10,7 +10,8 @@ export class SamDynamicViewComponent implements OnInit {
 
   constructor() { }
   @Input() elements: SamDynamicElementBase<any>[] = [];
-  
+  @Input() alignElement: string;
+
   ngOnInit() {
   }
 
