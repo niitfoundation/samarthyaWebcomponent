@@ -14,53 +14,53 @@ export class ProfileService {
 
 
     return {
-      "personalInfo": {
-        "displayname": "Divesh Sankhla",
-        "fname": "Divesh",
-        "lname": "Sankhla",
-        "gender": "male",
-        "email": "sankhlasaini@gmail.com",
+      'personalInfo': {
+        'displayname': 'Divesh Sankhla',
+        'fname': 'Divesh',
+        'lname': 'Sankhla',
+        'gender': 'male',
+        'email': 'sankhlasaini@gmail.com',
         'dob': '11-11-1992',
         'altemail': 'muruga55@gmail.com',
 
-        "address": [
+        'address': [
           {
-            "address1": 'Vijay Nagar',
-            "address2": 'Scheme No-4',
-            "landmark": "Railway Station Alwar",
-            "district": " Alwar",
-            "state": "RAJASTHAN",
-            "pincode": "301001",
+            'address1': 'Vijay Nagar',
+            'address2': 'Scheme No-4',
+            'landmark': 'Railway Station Alwar',
+            'district': ' Alwar',
+            'state': 'RAJASTHAN',
+            'pincode': '301001',
           },
           {
-            "address1": 'Nagar',
-            "address2": '4',
-            "landmark": "sajdkajhdkasjd",
-            "district": " dskfjhksdfksdjf",
-            "state": "ksadlasjdlsajdlasd",
-            "pincode": "301001",
+            'address1': 'Nagar',
+            'address2': '4',
+            'landmark': 'sajdkajhdkasjd',
+            'district': ' dskfjhksdfksdjf',
+            'state': 'ksadlasjdlsajdlasd',
+            'pincode': '301001',
           }
         ],
-        "contact": {
-          "I": "99123499123",
-          "II": "12312312333"
+        'contact': {
+          'I': '99123499123',
+          'II': '12312312333'
         },
-        "married": true,
-        "preLang": "English",
-        "nativeLang": "Hindi",
-        "lang": [{
-          "name": "Hindi",
-          "r": true,
-          "w": true,
-          "s": true,
+        'married': true,
+        'preLang': 'English',
+        'nativeLang': 'Hindi',
+        'lang': [{
+          'name': 'Hindi',
+          'r': true,
+          'w': true,
+          's': true,
         }, {
-          "name": "English",
-          "r": true,
-          "w": true,
-          "s": false,
+          'name': 'English',
+          'r': true,
+          'w': true,
+          's': false,
         }
         ]
       }
-    }
+    };
   }
 }

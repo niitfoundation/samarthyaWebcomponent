@@ -25,7 +25,8 @@ export class AppComponent {
   constructor(
     // service for getting data for profile sections
     private SamProfileService: ProfileService,
-    //Service for getting rendering config of profile sections
+
+    // Service for getting rendering config of profile sections
     private SamProfileSectionConfigService: SamProfileSectionConfigService,
     // service for providing sam profile card
     // private SamProfileCardService: SamProfileCardService
@@ -44,8 +45,6 @@ export class AppComponent {
       // { 'name': 'skills', 'title': 'Skills Informations' }
     ];
   }
-
-  ngOnInit() { }
 
   // this will provide section config for perticular sections from profile config section
   getSectionConfig(sectionName: string) {
