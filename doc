@@ -1,0 +1,14 @@
+Dynamic Component Rendering 
+
+    In Samarthya we have develeoped Dynamic Components for rendering view of candidate profile and edit of candidate profile.
+    By using Angular.io we are able be create only one Component and used it to render multiple type of elements like
+    -text with icon
+    -text with title
+    -plain text
+    -chips
+    -input box
+    -label
+    -dropdown, etc.
+
+    For rendering UI Components in Samarthya we have to provide the data and config with the "sam-profile-view" tag.
+    

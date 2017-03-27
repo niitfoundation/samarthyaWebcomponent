@@ -5,23 +5,23 @@ export class SamDynamicElementBase<T>{
   required: boolean;
   order: number;
   elemType: string;//controlType
-  dataObj: Object;
+  dataDescriptor: Object;
 
-  constructor(sectionViewData: {
+  constructor(elementConfig: {
     value?: T,
     elemName?: string,
     elemLabel?: string,
     required?: boolean,
     order?: number,
     elemType?: string,
-    dataObj?: Object
+    dataDescriptor?: Object
   } = {}) {
-    this.value = sectionViewData.value;
-    this.elemName = sectionViewData.elemName || '';
-    this.elemLabel = sectionViewData.elemLabel || '';
-    this.required = !!sectionViewData.required;
-    this.order = sectionViewData.order === undefined ? 1 : sectionViewData.order;
-    this.elemType = sectionViewData.elemType || '';
-    this.dataObj = sectionViewData.dataObj || '';
+    this.value = elementConfig.value;
+    this.elemName = elementConfig.elemName || '';
+    this.elemLabel = elementConfig.elemLabel || '';
+    this.required = !!elementConfig.required;
+    this.order = elementConfig.order === undefined ? 1 : elementConfig.order;
+    // this.elemType = elementConfig.elemType || '';
+    this.dataDescriptor = elementConfig.dataDescriptor || {};
   }
 }

@@ -30,6 +30,8 @@ build/Release
 node_modules
 jspm_packages
 
+profileSectionTest/node_modules
+profileSectionTest/dist
 # Optional npm cache directory
 .npm
 

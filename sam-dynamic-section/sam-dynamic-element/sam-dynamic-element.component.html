@@ -1,61 +1,52 @@
-<!--Display Rows for Title-->
-<!--<div fxLayout="row">
-  <div [attr.for]="element.elemName" class="title">{{element.elemLabel}}</div>
-  <a href="#" class="editBtn" class="editBtn" (click)="onEdit(editDialog,element)">
-    <i class="material-icons">mode_edit</i>
-  </a>-->
-<!--<div [attr.for]="element.info">{{element.info}}</div>-->
-<!--</div>-->
-
-<!--Testing Code==============================-->
-
-
 <!--switch case for selecting element type-->
 <div fxLayout="row">
-  <div [ngSwitch]="element.elemType">
+  <div [ngSwitch]="elementConfig.elemType">
 
-    <!--lables with icons-->
-    <div *ngSwitchCase="'iconDiv'" title='{{element.dataObj.info}}'>
+    <!--this is the element for div with icon-->
+    <div *ngSwitchCase="'icon-div'" title='{{elementConfig.dataDescriptor.info}}'>
       <div fxLayout="row" class="elements">
         <div fxFlex="40px" class="">
-          <i class="material-icons">{{element.dataObj.icon}}</i>
+          <i class="material-icons">{{elementConfig.dataDescriptor.icon}}</i>
         </div>
         <div fxFlex class="dataText">
-          {{element.dataObj.data}}
+          {{resolveFieldValue(elementData, elementConfig.dataDescriptor.dataFieldName)}}
         </div>
       </div>
     </div>
 
-    <!--data in chips-->
+    <!--this is the element for chips-->
     <div *ngSwitchCase="'chips'">
       <div>
         <md-chip-list>
-          <md-chip selected="true" color="accent" class="chips" title='{{element.dataObj.data}}'>
-            <div class="chips">{{element.dataObj.name}}</div>
+          <md-chip selected="true" color="accent" class="chips" title='{{elementConfig.dataDescriptor.info}}'>
+            <div class="chips">
+              {{resolveFieldValue(elementData, elementConfig.dataDescriptor.dataFieldName)}}
+            </div>
           </md-chip>
         </md-chip-list>
       </div>
     </div>
 
-
-    <!--lable with title-->
-    <div *ngSwitchCase="'titleDiv'">
+    <!--this is the element for div with title-->
+    <div *ngSwitchCase="'title-div'" title='{{elementConfig.dataDescriptor.info}}'>
       <div fxLayout="row" class="elements">
-        <div fxFlex="10" class="dataText">
-          {{element.dataObj.title}}
+        <div fxFlex="100px">
+          <b>{{elementConfig.dataDescriptor.title}}</b>
         </div>
-        <div fxFlex></div>
-        <div fxFlex="90" class="dataText">
-          {{element.dataObj.data}}
+        <div fxFlex>
+          {{resolveFieldValue(elementData, elementConfig.dataDescriptor.dataFieldName)}}
         </div>
       </div>
     </div>
 
-    <!--plain div-->
-    <div *ngSwitchCase="'div'">
+    <!--this is the element for text div only -->
+    <div *ngSwitchCase="'text-div'">
       <div fxLayout="row" class="elements">
         <div class="dataText">
-          {{element.dataObj.data}}
+          <div class="labelText">{{elementConfig.dataDescriptor.label}} </div>
+          <div>
+            {{resolveFieldValue(elementData, elementConfig.dataDescriptor.dataFieldName)}}
+          </div>
         </div>
       </div>
     </div>
@@ -63,26 +54,21 @@
 
     <!--input box-->
     <div *ngSwitchCase="'input'">
-      <md-input-container>
-        <input mdInput [(ngModel)]="element.elemName" type="element.type" placeholder="element.elemLabel">
+      <md-input-container class="input">
+        <input mdInput [(ngModel)]="element.dataObj.data" type="element.type" placeholder={{element.elemLabel}}>
       </md-input-container>
     </div>
 
 
     <!--label div-->
-    <div fxLayout="row" class="elements">
-      <div fxFlex="10" class="dataText">
-        {{element.dataObj.title}}
+    <div *ngSwitchCase="'label'">
+      <div fxLayout="row" class="elements">
+        <div fxFlex class="label">
+          {{element.dataObj.label}}
+        </div>
       </div>
     </div>
 
+
   </div>
 </div>
-
-<!--dialog box-->
-<!--<md2-dialog #editDialog>
-  <md2-dialog-title>{{element.elemLabel}}</md2-dialog-title>
-  <div>
-    {{element.sectionViewData[0].data}}
-  </div>
-</md2-dialog>-->

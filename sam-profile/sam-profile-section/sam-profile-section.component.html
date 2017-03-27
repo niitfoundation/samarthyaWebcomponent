@@ -5,8 +5,14 @@
     <!--title of the Sections-->
     <md-card-title>{{sectionTitle}}</md-card-title>
     <md-card-content>
-
         <!--data of the Sections-->
-        <sam-dynamic-view [elements]="elements" [alignElement]="alignElement"> </sam-dynamic-view>
+        <sam-dynamic-view 
+        [elementConfigColln]="sectionElements" 
+        [viewData]="sectionData" 
+        [alignElement]="alignElement" 
+        [viewTitle]="sectionTitle">
+        </sam-dynamic-view>
     </md-card-content>
+    <md-card-actions>
+    </md-card-actions>
 </md-card>

@@ -1,12 +1,12 @@
 import { SamDynamicElementBase } from './../sam-dynamic-element-base';
 
 export class SamDynamicLabel extends SamDynamicElementBase<string> {
-  controlType = 'label';
+  elemType = 'label';
 
-  sectionViewData: { data: string }[] = [];
+  dataDescriptor: { label: string }[] = [];
 
-  constructor(sectionViewData: {} = {}) {
-    super(sectionViewData);
-    this.sectionViewData = sectionViewData['sectionViewData'] || [];
-  }
+  constructor(dataDescriptor: {} = {}) {
+    super(dataDescriptor);
+    this.dataDescriptor = dataDescriptor['dataDescriptor'] || [];
+   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProfileService } from './profile-card-data-service';
 @Component({
   selector: 'sam-profile-card',
   templateUrl: './sam-profile-card.component.html',
@@ -17,9 +16,6 @@ export class SamProfileCardComponent implements OnInit {
   }
   ngOnInit() {
     this.cardData = this.profileCardData;
-
-    console.log(this.profileCardData);
-
   }
 }
 

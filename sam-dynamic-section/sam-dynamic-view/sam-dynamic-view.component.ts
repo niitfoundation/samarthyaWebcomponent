@@ -9,7 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SamDynamicViewComponent implements OnInit {
 
   constructor() { }
-  @Input() elements: SamDynamicElementBase<any>[] = [];
+  //Bind the config in a separate object
+  @Input() elementConfigColln: SamDynamicElementBase<any>[] = [];
+
+  //Bind the data for the entire view
+  @Input() viewData: Object;
+
+  //Bind the title for the entire view
+  @Input() viewTitle:string;
+
   @Input() alignElement: string;
 
   ngOnInit() {

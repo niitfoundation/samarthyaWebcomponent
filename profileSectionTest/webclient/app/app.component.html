@@ -1,0 +1,23 @@
+<h1>Test App for Samarth profile sections</h1>
+<br>
+<br>
+<div fxLayout="row" fxLayout.xs="column" class="profilePage">
+    <!--profile Card section-->
+    <!--<div fxFlex.gt-xs="350px" fxFlex.xs="550px" class="profileCard">
+    <sam-profile-card [profileCardData]="profileCardData"> </sam-profile-card>
+  </div>-->
+
+    <!--spacing between components-->
+    <!--<div fxFlex="30px"></div>-->
+
+    <!--view profile sections dynamic-->
+    <div fxFlex class="profileSection">
+        <div fxLayout="row" fxLayoutWrap>
+            <div *ngFor="let section of profileSections" fxFlex>
+                <sam-profile-section [sectionFieldConfig]="getSectionConfig(section.name)" [sectionData]="getSectiondata(section.name)" [sectionTitle]="section.title"
+                    [alignElement]="section.align">
+                    </sam-profile-section>
+            </div>
+        </div>
+    </div>
+</div>
