@@ -11,8 +11,6 @@ export class SamProfileCardComponent implements OnInit {
   public cardData: Object;
 
   constructor() {
-    // this.cardData = "DHER";
-    // this.cardData = this.ProfileService.getCardData();
   }
   ngOnInit() {
     this.cardData = this.profileCardData;

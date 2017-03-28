@@ -1,0 +1,25 @@
+md-card
+{
+    /*margin: 10px 5px 10px 5px;*/
+    margin-left: 10px;
+    min-width: 300px;
+    margin-bottom: 10px;
+}
+@media(min-width:10px){
+md-card
+{
+     margin-left: 0px;
+}
+}
+@media(min-width:480px){
+md-card
+{
+     margin-left: 10px;
+}
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.actionBtn{
+  
+}

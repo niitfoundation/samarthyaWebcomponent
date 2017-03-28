@@ -1,6 +1,8 @@
 import { SamDynamicElementComponent } from './sam-dynamic-section/sam-dynamic-element/sam-dynamic-element.component';
 import { SamDynamicViewComponent } from './sam-dynamic-section/sam-dynamic-view/sam-dynamic-view.component';
+import { SamDynamicFormComponent } from './sam-dynamic-section/sam-dynamic-form/sam-dynamic-form.component';
 import { SamProfileSectionComponent } from './sam-profile/sam-profile-section/sam-profile-section.component';
+import { SamProfileSectionFormComponent } from './sam-profile/sam-profile-section-form/sam-profile-section-form.component';
 import { SamProfileCardComponent } from './sam-profile/sam-profile-card/sam-profile-card.component';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from '@angular/material';
@@ -24,14 +26,18 @@ import { Md2Module } from 'md2';
 	declarations: [
 		SamProfileSectionComponent,
 		SamDynamicViewComponent,
+		SamDynamicFormComponent,
 		SamDynamicElementComponent,
 		SamProfileCardComponent,
+		SamProfileSectionFormComponent
 	],
 	exports: [
 		SamProfileSectionComponent,
 		SamDynamicViewComponent,
+		SamDynamicFormComponent,
 		SamDynamicElementComponent,
-		SamProfileCardComponent
+		SamProfileCardComponent,
+		SamProfileSectionFormComponent
 	]
 })
 

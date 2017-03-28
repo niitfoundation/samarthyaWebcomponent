@@ -18,7 +18,7 @@ export class SamDynamicElementComponent implements OnInit {
     'flat': this.flatFieldResolver,
     'composite': this.compositeFieldResolver,
     'nested': this.nestedFieldResolver,
-    // 'nestedArrey': this.nestedArrayFieldResolver
+    'nestedArrey': this.nestedArrayFieldResolver
   };
 
   ngOnInit() { }
@@ -55,26 +55,13 @@ export class SamDynamicElementComponent implements OnInit {
   }
 
 
-  // private nestedArrayFieldResolver(elementData: Object, fieldName: any) {
-  //   //  console.log("elementData : ",elementData);
-  //   //  console.log('====================================');
-
-  //   //  fieldName.fields[0]='address[0]';
-  //   //  console.log('fieldName : ',fieldName.fields);
-  //   let data = elementData;
-  //   console.log( data[fieldName.fields[0]][0]);
-
-  //   //Pick the data nested way
-  //   fieldName.fields.forEach(function (fieldname: any) {
-  //     data = data[fieldname];
-  //     // console.log('---------------------------------------------------------------')
-  //     // console.log(data[0]);
-  //     // data = data[0];
-  //     // console.log(fieldname)
-  //     // console.log('---------------------------------------------------------------')
-  //   });
-  //   return data;
-  // }
+  private nestedArrayFieldResolver(elementData: Object, fieldName: any) {
+    let data = elementData;
+    for (let i = 0; i < fieldName.fields.length; i++) {
+      data = data[fieldName.fields[i]];
+    }
+    return data;
+  }
 
   resolveFieldValue(elementData: any, fieldName: any) {
     if ((typeof fieldName) === 'object') {

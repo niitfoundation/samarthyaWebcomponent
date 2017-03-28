@@ -104,7 +104,7 @@ export class SamProfileSectionConfigService {
                     //     'dataDescriptor': {
                     //         'dataFieldName': {
                     //             'type': 'nestedArrey',
-                    //             'fields': ['address', 'landmark']
+                    //             'fields': ['address', 0, 'landmark']
                     //         },
                     //         'title': 'Line 1',
                     //         'info': 'Address Line 1'

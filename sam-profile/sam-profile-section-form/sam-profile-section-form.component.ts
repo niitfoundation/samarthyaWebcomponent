@@ -6,12 +6,12 @@ import { SamDynamicChips } from './../../sam-dynamic-section/sam-dynamic-element
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'sam-profile-section',
-  templateUrl: './sam-profile-section.component.html',
-  styleUrls: ['./sam-profile-section.component.css']
+  selector: 'sam-profile-section-form',
+  templateUrl: './sam-profile-section-form.component.html',
+  styleUrls: ['./sam-profile-section-form.component.css']
 })
 
-export class SamProfileSectionComponent implements OnInit {
+export class SamProfileSectionFormComponent implements OnInit {
 
   // This will contains all the required config to render the elements
   // this will be mapped to elementconfigColln of SamDynamicViewComponent
@@ -29,7 +29,7 @@ export class SamProfileSectionComponent implements OnInit {
   @Input() alignElement: string;
 
   // this will toggle edit and view mode
-  public editMode: boolean;
+  public editMode = false;
 
   sectionElements: SamDynamicElementBase<any>[] = [];
 
@@ -53,9 +53,6 @@ export class SamProfileSectionComponent implements OnInit {
 
   ngOnInit() {
     this.initializeSectionElements();
-    if (this.type == 'view') {
-      this.editMode = false;
-    }
   }
 
   initializeSectionElements() {

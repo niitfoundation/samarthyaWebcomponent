@@ -1,0 +1,6 @@
+<!--Looping through the elements to get each element-->
+<div fxLayout={{alignElement}} fxLayoutWrap>
+  <div *ngFor="let element of elementConfigColln">
+    <sam-dynamic-element [elementConfig]="element" [elementData]="viewData" [title]="viewTitle"></sam-dynamic-element>
+  </div>
+</div>

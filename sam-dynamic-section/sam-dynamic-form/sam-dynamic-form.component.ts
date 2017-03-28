@@ -2,11 +2,11 @@ import { SamDynamicElementBase } from './../sam-dynamic-element/sam-dynamic-elem
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'sam-dynamic-view',
-  templateUrl: './sam-dynamic-view.component.html',
-  styleUrls: ['./sam-dynamic-view.component.css']
+  selector: 'sam-dynamic-form',
+  templateUrl: './sam-dynamic-form.component.html',
+  styleUrls: ['./sam-dynamic-form.component.css']
 })
-export class SamDynamicViewComponent implements OnInit {
+export class SamDynamicFormComponent implements OnInit {
 
   constructor() { }
   // Bind the config in a separate object

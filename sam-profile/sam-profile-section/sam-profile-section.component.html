@@ -1,18 +1,17 @@
 <!--Profile sections dynamic -->
 <!--One Section shown in one card-->
 <md-card class="card" fxFlex>
-
     <!--title of the Sections-->
     <md-card-title>{{sectionTitle}}</md-card-title>
     <md-card-content>
         <!--data of the Sections-->
-        <sam-dynamic-view 
-        [elementConfigColln]="sectionElements" 
-        [viewData]="sectionData" 
-        [alignElement]="alignElement" 
-        [viewTitle]="sectionTitle">
+        <sam-dynamic-view [elementConfigColln]="sectionElements" [viewData]="sectionData" [alignElement]="alignElement" [viewTitle]="sectionTitle">
         </sam-dynamic-view>
     </md-card-content>
     <md-card-actions>
+        <div fxLayout="row">
+            <div fxFlex></div>
+            <ng-content select="[editBtn]"></ng-content>
+        </div>
     </md-card-actions>
 </md-card>
