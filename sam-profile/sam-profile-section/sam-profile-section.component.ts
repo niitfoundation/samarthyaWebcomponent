@@ -15,7 +15,7 @@ export class SamProfileSectionComponent implements OnInit {
 
   // This will contains all the required config to render the elements
   // this will be mapped to elementconfigColln of SamDynamicViewComponent
-  @Input() sectionFieldConfig: any[] = [];
+ @Input() sectionFieldConfig: any[] = [];
 
   // this have all the data which we going to provide to elements
   // this will be mapped to element view data of SamDynamicViewComponent
@@ -27,9 +27,6 @@ export class SamProfileSectionComponent implements OnInit {
 
   // this is for alignment of data in this section
   @Input() alignElement: string;
-
-  // this will toggle edit and view mode
-  public editMode: boolean;
 
   sectionElements: SamDynamicElementBase<any>[] = [];
 
@@ -52,14 +49,10 @@ export class SamProfileSectionComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.initializeSectionElements();
-    if (this.type == 'view') {
-      this.editMode = false;
-    }
   }
 
   initializeSectionElements() {
-    this.sectionElements = this.sectionFieldConfig.fields.map(
+    this.sectionElements = this.sectionFieldConfig['fields'].map(
       (fieldConfigObj: any) => {
         let elementBuilderClosure = this.elementBuilders[fieldConfigObj.elemType];
         if (elementBuilderClosure) {
@@ -69,18 +62,5 @@ export class SamProfileSectionComponent implements OnInit {
     );
   }
 
-  // when user click on edit btn
-  onEdit() {
-    this.editMode = true;
-  }
 
-  // when user click on cancel btn
-  onCancel() {
-    this.editMode = false;
-  }
-
-  // when user click on save btn
-  onSave() {
-    console.log('save function called');
-  }
 }

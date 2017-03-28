@@ -56,7 +56,7 @@ export class SamProfileSectionFormComponent implements OnInit {
   }
 
   initializeSectionElements() {
-    this.sectionElements = this.sectionFieldConfig.fields.map(
+    this.sectionElements = this.sectionFieldConfig['fields'].map(
       (fieldConfigObj: any) => {
         let elementBuilderClosure = this.elementBuilders[fieldConfigObj.elemType];
         if (elementBuilderClosure) {
