@@ -15,7 +15,7 @@ export class SamProfileSectionComponent implements OnInit {
 
   // This will contains all the required config to render the elements
   // this will be mapped to elementconfigColln of SamDynamicViewComponent
- @Input() sectionFieldConfig: any[] = [];
+  @Input() sectionFieldConfig: any[] = [];
 
   // this have all the data which we going to provide to elements
   // this will be mapped to element view data of SamDynamicViewComponent
@@ -49,6 +49,7 @@ export class SamProfileSectionComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.initializeSectionElements();
   }
 
   initializeSectionElements() {

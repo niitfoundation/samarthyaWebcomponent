@@ -2,6 +2,10 @@
 <div fxLayout="row">
   <div [ngSwitch]="elementConfig.elemType">
 
+    <!--===============================
+    VIEW ELEMENTS
+    ===================================-->
+
     <!--this is the element for div with icon-->
     <div *ngSwitchCase="'icon-div'" title='{{elementConfig.dataDescriptor.info}}'>
       <div fxLayout="row" class="elements">
@@ -9,7 +13,7 @@
           <i class="material-icons">{{elementConfig.dataDescriptor.icon}}</i>
         </div>
         <div fxFlex class="dataText">
-          {{resolveFieldValue(elementData, elementConfig.dataDescriptor.dataFieldName)}}
+          {{fieldData}}
         </div>
       </div>
     </div>
@@ -20,7 +24,7 @@
         <md-chip-list>
           <md-chip selected="true" color="accent" class="chips" title='{{elementConfig.dataDescriptor.info}}'>
             <div class="chips">
-              {{resolveFieldValue(elementData, elementConfig.dataDescriptor.dataFieldName)}}
+              {{fieldData}}
             </div>
           </md-chip>
         </md-chip-list>
@@ -34,7 +38,7 @@
           <b>{{elementConfig.dataDescriptor.title}}</b>
         </div>
         <div fxFlex>
-          {{resolveFieldValue(elementData, elementConfig.dataDescriptor.dataFieldName)}}
+          {{fieldData}}
         </div>
       </div>
     </div>
@@ -45,30 +49,11 @@
         <div class="dataText">
           <div class="labelText">{{elementConfig.dataDescriptor.label}} </div>
           <div>
-            {{resolveFieldValue(elementData, elementConfig.dataDescriptor.dataFieldName)}}
+            {{fieldData}}
           </div>
         </div>
       </div>
     </div>
-
-
-    <!--input box-->
-    <div *ngSwitchCase="'input'">
-      <md-input-container class="input">
-        <input mdInput [(ngModel)]="element.dataObj.data" type="element.type" placeholder={{element.elemLabel}}>
-      </md-input-container>
-    </div>
-
-
-    <!--label div-->
-    <div *ngSwitchCase="'label'">
-      <div fxLayout="row" class="elements">
-        <div fxFlex class="label">
-          {{element.dataObj.label}}
-        </div>
-      </div>
-    </div>
-
 
   </div>
 </div>

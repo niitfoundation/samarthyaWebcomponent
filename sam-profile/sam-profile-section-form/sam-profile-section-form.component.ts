@@ -3,6 +3,8 @@ import { SamDynamicIconDiv } from './../../sam-dynamic-section/sam-dynamic-eleme
 import { SamDynamicTitleDiv } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-titleDiv-element';
 import { SamDynamicDiv } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-textDiv-element';
 import { SamDynamicChips } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-chips-element';
+import { SamDynamicLabel } from './../../sam-dynamic-section/sam-dynamic-form-element/form-elements/sam-dynamic-label-element';
+import { SamDynamicInput } from './../../sam-dynamic-section/sam-dynamic-form-element/form-elements/sam-dynamic-input-element';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -28,17 +30,15 @@ export class SamProfileSectionFormComponent implements OnInit {
   // this is for alignment of data in this section
   @Input() alignElement: string;
 
-  // this will toggle edit and view mode
-  public editMode = false;
 
   sectionElements: SamDynamicElementBase<any>[] = [];
 
   private elementBuilders = {
-    'icon-div': function (configObj: any) {
-      return new SamDynamicIconDiv(configObj);
+    'label': function (configObj: any) {
+      return new SamDynamicLabel(configObj);
     },
-    'title-div': function (configObj: any) {
-      return new SamDynamicTitleDiv(configObj);
+    'input': function (configObj: any) {
+      return new SamDynamicInput(configObj);
     },
     'text-div': function (configObj: any) {
       return new SamDynamicDiv(configObj);
@@ -64,20 +64,5 @@ export class SamProfileSectionFormComponent implements OnInit {
         }
       }
     );
-  }
-
-  // when user click on edit btn
-  onEdit() {
-    this.editMode = true;
-  }
-
-  // when user click on cancel btn
-  onCancel() {
-    this.editMode = false;
-  }
-
-  // when user click on save btn
-  onSave() {
-    console.log('save function called');
   }
 }

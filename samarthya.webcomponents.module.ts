@@ -1,4 +1,5 @@
 import { SamDynamicElementComponent } from './sam-dynamic-section/sam-dynamic-element/sam-dynamic-element.component';
+import { SamDynamicFormElementComponent } from './sam-dynamic-section/sam-dynamic-form-element/sam-dynamic-form-element.component';
 import { SamDynamicViewComponent } from './sam-dynamic-section/sam-dynamic-view/sam-dynamic-view.component';
 import { SamDynamicFormComponent } from './sam-dynamic-section/sam-dynamic-form/sam-dynamic-form.component';
 import { SamProfileSectionComponent } from './sam-profile/sam-profile-section/sam-profile-section.component';
@@ -11,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import 'hammerjs';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { Md2Module } from 'md2';
 
 @NgModule({
@@ -28,6 +30,7 @@ import { Md2Module } from 'md2';
 		SamDynamicViewComponent,
 		SamDynamicFormComponent,
 		SamDynamicElementComponent,
+		SamDynamicFormElementComponent,
 		SamProfileCardComponent,
 		SamProfileSectionFormComponent
 	],
@@ -35,6 +38,7 @@ import { Md2Module } from 'md2';
 		SamProfileSectionComponent,
 		SamDynamicViewComponent,
 		SamDynamicFormComponent,
+		SamDynamicFormElementComponent,
 		SamDynamicElementComponent,
 		SamProfileCardComponent,
 		SamProfileSectionFormComponent

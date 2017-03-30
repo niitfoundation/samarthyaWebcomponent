@@ -1,16 +1,20 @@
-import { SamDynamicElementBase } from './sam-dynamic-element-base';
+import { SamDynamicElementBase } from '../sam-dynamic-element/sam-dynamic-element-base';
 import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'sam-dynamic-element',
-  templateUrl: './sam-dynamic-element.component.html',
-  styleUrls: ['./sam-dynamic-element.component.css']
+  selector: 'sam-dynamic-form-element',
+  templateUrl: './sam-dynamic-form-element.component.html',
+  styleUrls: ['./sam-dynamic-form-element.component.css']
 })
 
-export class SamDynamicElementComponent implements OnInit {
+export class SamDynamicFormElementComponent implements OnInit {
   @Input() elementConfig: SamDynamicElementBase<any>;
   @Input() elementData: Object;
   @Input() title: string;
+  @Input() form: FormGroup;
+
+  get isValid() { return this.form.controls[this.elementConfig.elemName].valid; }
 
   constructor() { }
 

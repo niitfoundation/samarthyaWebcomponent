@@ -1,6 +1,16 @@
 <!--Looping through the elements to get each element-->
 <div fxLayout={{alignElement}} fxLayoutWrap>
-  <div *ngFor="let element of elementConfigColln">
-    <sam-dynamic-element [elementConfig]="element" [elementData]="viewData" [title]="viewTitle"></sam-dynamic-element>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+    <div *ngFor="let element of elementConfigColln">
+      <sam-dynamic-form-element [elementConfig]="element" [elementData]="viewData" [title]="viewTitle" [form]="form"></sam-dynamic-form-element>
+    </div>
+
+    <div class="form-row">
+      <button type="submit">Save</button>
+    </div>
+  </form>
+  <div *ngIf="payLoad" class="form-row">
+    <strong>Saved the following values</strong><br>{{payLoad}}
   </div>
 </div>

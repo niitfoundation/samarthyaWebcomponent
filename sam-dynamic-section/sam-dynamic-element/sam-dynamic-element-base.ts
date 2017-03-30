@@ -21,7 +21,7 @@ export class SamDynamicElementBase<T>{
     this.elemLabel = elementConfig.elemLabel || '';
     this.required = !!elementConfig.required;
     this.order = elementConfig.order === undefined ? 1 : elementConfig.order;
-    // this.elemType = elementConfig.elemType || '';
+    this.elemType = elementConfig.elemType || '';
     this.dataDescriptor = elementConfig.dataDescriptor || {};
   }
 }
