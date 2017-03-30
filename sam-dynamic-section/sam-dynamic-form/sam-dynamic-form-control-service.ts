@@ -8,15 +8,13 @@ export class SamDynamicFormControlService {
   constructor() { }
 
   toFormGroup(formElems: SamDynamicElementBase<any>[]) {
-    console.log('control service called');
     let group: any = {};
     formElems.forEach(formElem => {
       group[formElem.elemName] = formElem.required ? new FormControl(formElem.value || '', Validators.required)
         : new FormControl(formElem.value || '');
     });
 
-    let frmGroup = new FormGroup(group);
-    console.log(frmGroup);
-    return frmGroup;
+    let formGroup = new FormGroup(group);
+    return formGroup;
   }
 }

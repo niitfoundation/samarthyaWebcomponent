@@ -1,16 +1,13 @@
 import { SamDynamicElementBase } from './../../sam-dynamic-section/sam-dynamic-element/sam-dynamic-element-base';
-import { SamDynamicIconDiv } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-iconDiv-element';
-import { SamDynamicTitleDiv } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-titleDiv-element';
-import { SamDynamicDiv } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-textDiv-element';
-import { SamDynamicChips } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-chips-element';
 import { SamDynamicLabel } from './../../sam-dynamic-section/sam-dynamic-form-element/form-elements/sam-dynamic-label-element';
 import { SamDynamicInput } from './../../sam-dynamic-section/sam-dynamic-form-element/form-elements/sam-dynamic-input-element';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'sam-profile-section-form',
   templateUrl: './sam-profile-section-form.component.html',
-  styleUrls: ['./sam-profile-section-form.component.css']
+  styleUrls: ['./sam-profile-section-form.component.css'],
+  outputs: ['childEvent']
 })
 
 export class SamProfileSectionFormComponent implements OnInit {
@@ -31,7 +28,10 @@ export class SamProfileSectionFormComponent implements OnInit {
   @Input() alignElement: string;
 
 
+  constructor() { }
+
   sectionElements: SamDynamicElementBase<any>[] = [];
+
 
   private elementBuilders = {
     'label': function (configObj: any) {
@@ -39,17 +39,8 @@ export class SamProfileSectionFormComponent implements OnInit {
     },
     'input': function (configObj: any) {
       return new SamDynamicInput(configObj);
-    },
-    'text-div': function (configObj: any) {
-      return new SamDynamicDiv(configObj);
-    },
-    'chips': function (configObj: any) {
-      return new SamDynamicChips(configObj);
     }
   };
-
-  constructor() {
-  }
 
   ngOnInit() {
     this.initializeSectionElements();
@@ -64,5 +55,14 @@ export class SamProfileSectionFormComponent implements OnInit {
         }
       }
     );
+  }
+
+  // this will create a new child event
+  childEvent = new EventEmitter<string>();
+
+  // this will send the child event data to parent
+  sendFormData($event: any) {
+    let formObj = $event;
+    this.childEvent.emit(formObj);
   }
 }

@@ -1,10 +1,10 @@
 export class SamDynamicElementBase<T>{
   value: T;
-  elemName: string;//key  
-  elemLabel: string;//label
+  elemName: string; // key
+  elemLabel: string; // label
   required: boolean;
   order: number;
-  elemType: string;//controlType
+  elemType: string; // controlType
   dataDescriptor: Object;
 
   constructor(elementConfig: {

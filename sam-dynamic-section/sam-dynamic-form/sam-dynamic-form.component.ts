@@ -1,5 +1,5 @@
 import { SamDynamicElementBase } from '../sam-dynamic-element/sam-dynamic-element-base';
-import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Component, OnInit, Input, Inject, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { SamDynamicFormControlService } from './sam-dynamic-form-control-service';
 
@@ -7,7 +7,8 @@ import { SamDynamicFormControlService } from './sam-dynamic-form-control-service
   selector: 'sam-dynamic-form',
   templateUrl: './sam-dynamic-form.component.html',
   styleUrls: ['./sam-dynamic-form.component.css'],
-  providers: [SamDynamicFormControlService]
+  providers: [SamDynamicFormControlService],
+  outputs: ['childEvent']
 })
 export class SamDynamicFormComponent implements OnInit {
 
@@ -25,12 +26,15 @@ export class SamDynamicFormComponent implements OnInit {
   form: FormGroup;
   payLoad = '';
 
+  // this will create form group for each sections
   ngOnInit() {
     this.form = this.controlService.toFormGroup(this.elementConfigColln);
   }
-  onSubmit() {
-    console.log('submit called : ', this.form.value)
-    this.payLoad = JSON.stringify(this.form.value);
-  }
 
+  // this will emit child event
+  childEvent = new EventEmitter<string>();
+
+  onSubmit() {
+    this.childEvent.emit(this.form.value);
+  }
 }

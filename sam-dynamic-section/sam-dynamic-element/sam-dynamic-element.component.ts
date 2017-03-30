@@ -14,7 +14,7 @@ export class SamDynamicElementComponent implements OnInit {
 
   constructor() { }
 
-  private fieldResolvers = {
+  protected fieldResolvers = {
     'flat': this.flatFieldResolver,
     'composite': this.compositeFieldResolver,
     'nested': this.nestedFieldResolver,
@@ -27,16 +27,16 @@ export class SamDynamicElementComponent implements OnInit {
   }
 
   // for simple field whre only flat data field available
-  private flatFieldResolver(elementData: Object, fieldName: any) {
+  protected flatFieldResolver(elementData: Object, fieldName: any) {
     return elementData[fieldName];
   }
 
   // for composite fields where two or more data fields are requied
-  private compositeFieldResolver(elementData: Object, fieldName: any) {
+  protected compositeFieldResolver(elementData: Object, fieldName: any) {
     let data = '';
     let delim = (fieldName.delimiter || '');
 
-    //Pick the data composite way
+    // Pick the data composite way
     fieldName.fields.forEach(function (fieldname: any) {
       data += elementData[fieldname] + delim;
     });
@@ -44,10 +44,10 @@ export class SamDynamicElementComponent implements OnInit {
   }
 
   // for nested data field like objects of datafield
-  private nestedFieldResolver(elementData: Object, fieldName: any) {
+  protected nestedFieldResolver(elementData: Object, fieldName: any) {
     let data = elementData;
 
-    //Pick the data nested way
+    // Pick the data nested way
     fieldName.fields.forEach(function (fieldname: any) {
       data = data[fieldname];
       // console.log(data);
@@ -55,7 +55,7 @@ export class SamDynamicElementComponent implements OnInit {
     return data;
   }
 
-  private nestedArrayFieldResolver(elementData: Object, fieldName: any) {
+  protected nestedArrayFieldResolver(elementData: Object, fieldName: any) {
     let data = elementData;
     for (let i = 0; i < fieldName.fields.length; i++) {
       data = data[fieldName.fields[i]];
@@ -63,7 +63,7 @@ export class SamDynamicElementComponent implements OnInit {
     return data;
   }
 
-  resolveFieldValue(elementData: any, fieldName: any) {
+  protected resolveFieldValue(elementData: any, fieldName: any) {
     if ((typeof fieldName) === 'object') {
       return this.fieldResolvers[fieldName.type](elementData, fieldName);
     } else {

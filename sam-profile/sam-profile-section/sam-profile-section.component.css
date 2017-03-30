@@ -2,7 +2,7 @@ md-card
 {
     /*margin: 10px 5px 10px 5px;*/
     margin-left: 10px;
-    min-width: 300px;
+    min-width: 350px;
     margin-bottom: 10px;
 }
 @media(min-width:10px){
@@ -19,7 +19,4 @@ md-card
 }
 *{
     font-family: Arial, Helvetica, sans-serif;
-}
-.actionBtn{
-  
 }

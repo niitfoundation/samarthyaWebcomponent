@@ -4,84 +4,27 @@
     <div [ngSwitch]="elementConfig.elemType">
 
       <!--===============================
-    VIEW ELEMENTS
-    ===================================-->
-
-      <!--this is the element for div with icon-->
-      <!--<div *ngSwitchCase="'icon-div'" title='{{elementConfig.dataDescriptor.info}}'>
-      <div fxLayout="row" class="elements">
-        <div fxFlex="40px" class="">
-          <i class="material-icons">{{elementConfig.dataDescriptor.icon}}</i>
-        </div>
-        <div fxFlex class="dataText">
-          {{fieldData}}
-        </div>
-      </div>
-    </div>-->
-
-      <!--this is the element for chips-->
-      <!--<div *ngSwitchCase="'chips'">
-      <div>
-        <md-chip-list>
-          <md-chip selected="true" color="accent" class="chips" title='{{elementConfig.dataDescriptor.info}}'>
-            <div class="chips">
-              {{fieldData}}
-            </div>
-          </md-chip>
-        </md-chip-list>
-      </div>
-    </div>-->
-
-      <!--this is the element for div with title-->
-      <!--<div *ngSwitchCase="'title-div'" title='{{elementConfig.dataDescriptor.info}}'>
-      <div fxLayout="row" class="elements">
-        <div fxFlex="100px">
-          <b>{{elementConfig.dataDescriptor.title}}</b>
-        </div>
-        <div fxFlex>
-          {{fieldData}}
-        </div>
-      </div>
-    </div>-->
-
-      <!--this is the element for text div only -->
-      <!--<div *ngSwitchCase="'text-div'">
-      <div fxLayout="row" class="elements">
-        <div class="dataText">
-          <div class="labelText">{{elementConfig.dataDescriptor.label}} </div>
-          <div>
-            {{fieldData}}
-          </div>
-        </div>
-      </div>
-    </div>-->
-
-
-      <!--===============================
     FORM ELEMENTS
     ===================================-->
-  <!--formControlName ="elementConfig.elemName" -->
       <!--this is the element for input box -->
       <div *ngSwitchCase="'input'">
         <md-input-container class="input">
-          <input mdInput [(ngModel)]="fieldData" 
-          [formControlName]="elementConfig.elemName"
-          placeholder={{elementConfig.dataDescriptor.label}}>
+          <input mdInput [(ngModel)]="fieldData" [formControlName]="elementConfig.elemName" placeholder={{elementConfig.dataDescriptor.label}}>
         </md-input-container>
       </div>
 
 
       <!--this is the element for text label only -->
-      <!--<div *ngSwitchCase="'label'">
-      <div fxLayout="row" class="elements">
-        <div fxFlex class="label">
-          {{elementConfig.dataDescriptor.label}}
+      <div *ngSwitchCase="'label'">
+        <div fxLayout="row" class="elements">
+          <div fxFlex class="label">
+            {{elementConfig.dataDescriptor.label}}
+          </div>
         </div>
       </div>
-    </div>-->
 
     </div>
-    <!--<div class="errorMessage" *ngIf="!isValid">HWLLL is required</div>-->
+    <div class="errorMessage" *ngIf="!isValid">HWLLL is required</div>
 
-    </div>
   </div>
+</div>

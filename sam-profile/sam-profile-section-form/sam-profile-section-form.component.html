@@ -1,9 +1,8 @@
 <!--Profile sections form dynamic -->
-<!--form for profile sections-->
-<!--data of the Sections-->
-<sam-dynamic-form [elementConfigColln]="sectionElements" [viewData]="sectionData" [alignElement]="alignElement" [viewTitle]="sectionTitle">
+<sam-dynamic-form 
+    (childEvent)="sendFormData($event)" 
+    [elementConfigColln]="sectionElements" 
+    [viewData]="sectionData" 
+    [alignElement]="alignElement"
+    [viewTitle]="sectionTitle">
 </sam-dynamic-form>
-<div fxLayout="row">
-    <div fxFlex></div>
-    <ng-content select="[formBtn]"></ng-content>
-</div>

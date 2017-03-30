@@ -6,11 +6,9 @@
       <sam-dynamic-form-element [elementConfig]="element" [elementData]="viewData" [title]="viewTitle" [form]="form"></sam-dynamic-form-element>
     </div>
 
-    <div class="form-row">
-      <button type="submit">Save</button>
+    <div fxLayout="row">
+      <div fxFlex></div>
+      <button md-raised-button (click)="onSubmit()">SAVE</button>
     </div>
   </form>
-  <div *ngIf="payLoad" class="form-row">
-    <strong>Saved the following values</strong><br>{{payLoad}}
-  </div>
 </div>
