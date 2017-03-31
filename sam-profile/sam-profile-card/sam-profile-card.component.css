@@ -5,10 +5,15 @@
 }
 
 md-card {
-    top: 100px;
+    <<<<<<< HEAD top: 100px;
     width: 300px;
     margin: auto;
     color: dimgray;
+    =======top: 60px;
+    width: 300px;
+    margin: auto;
+    background-color: white;
+    >>>>>>>607b1849fe9b39e647a17b3dcbfee95203a7566c
 }
 
 @media(min-width:10px) {
@@ -66,4 +71,12 @@ md-chip {
     min-width: 80px;
     text-align: center;
     margin: 1px;
+}
+
+.downloadCard {
+    width: 370px;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }

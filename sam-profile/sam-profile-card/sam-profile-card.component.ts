@@ -13,10 +13,11 @@ export class SamProfileCardComponent implements OnInit {
 
   constructor() {
   }
+
   ngOnInit() {
     this.cardData = this.profileCardData;
   }
-  //  public download(event) {
+  //  public download(event) 
   //   console.log('asdasd');
   //   var timeStamp = new Date().getTime();
   //   console.log(timeStamp);
