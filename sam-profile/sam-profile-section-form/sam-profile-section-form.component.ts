@@ -27,7 +27,6 @@ export class SamProfileSectionFormComponent implements OnInit {
   // this is for alignment of data in this section
   @Input() alignElement: string;
 
-
   constructor() { }
 
   sectionElements: SamDynamicElementBase<any>[] = [];

@@ -35,6 +35,7 @@ export class SamDynamicFormComponent implements OnInit {
   childEvent = new EventEmitter<string>();
 
   onSubmit() {
+    delete this.form.value[''];
     this.childEvent.emit(this.form.value);
   }
 }
