@@ -27,7 +27,7 @@ export class SamProfileCardComponent implements OnInit {
   //   var newData = imageData.replace(/^data:image\/png/,"data:application/octet-stream");
   //   var dwld = document.getElementById("downloadpc");
   //   dwld.setAttribute("download", name);
-  //   dwld.setAttribute("href", newData);    
+  //   dwld.setAttribute("href", newData);
   //   });
   // }
 }

@@ -5,15 +5,10 @@
 }
 
 md-card {
-    <<<<<<< HEAD top: 100px;
+    top: 100px;
     width: 300px;
     margin: auto;
     color: dimgray;
-    =======top: 60px;
-    width: 300px;
-    margin: auto;
-    background-color: white;
-    >>>>>>>607b1849fe9b39e647a17b3dcbfee95203a7566c
 }
 
 @media(min-width:10px) {
