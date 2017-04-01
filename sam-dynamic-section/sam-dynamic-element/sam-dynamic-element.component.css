@@ -2,20 +2,25 @@
     padding: 7px;
     color:dimgray;
 }
+
 .dataText{
     margin: auto;
+    font-size: 16px;
+    padding-bottom: 2px;
 }
-*{
-    font-size: 17px;
-}
+
 i{
     font-size: 22px;
 }
 .chips{
     font-size: 15px;
     margin: 3px;
-    min-width: 80px;
+    min-width: 100px;
     text-align: center;
+}
+.chipText{
+    margin: auto;
+    font-size: 15px;
 }
 .editBtn{
     position: absolute;
@@ -33,4 +38,45 @@ i{
 .labelText{
     padding-top: 10px;
     font-weight: bold;  
+}
+.chipBatch{
+    /*border: 2px solid black;*/
+    margin-left: 10px;
+    padding: 2px 7px 2px 7px;
+    /*padding-left: 7px;*/
+    /*padding-right: 7px;*/
+    background-color: whitesmoke;
+    color: dimgray;
+    border-radius: 100%;
+}
+.listHead{
+    font-weight: bold;
+    font-size: 18px;
+    color: dimgray;
+}
+.listContent{
+    font-size: 16px;
+    color: dimgray;
+}
+.list{
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.block{
+    /*border: 1spx solid black;*/
+  
+}
+
+
+@media(min-width:10px){
+ .block{
+      width: 250px;
+ }
+}
+
+@media(min-width:768px){
+    .block{
+          width: 300px;
+    }
 }

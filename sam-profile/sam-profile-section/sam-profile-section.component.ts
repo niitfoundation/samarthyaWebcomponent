@@ -3,6 +3,8 @@ import { SamDynamicIconDiv } from './../../sam-dynamic-section/sam-dynamic-eleme
 import { SamDynamicTitleDiv } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-titleDiv-element';
 import { SamDynamicDiv } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-textDiv-element';
 import { SamDynamicChips } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-chips-element';
+import { SamDynamicChipsColl } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-chipsColl-element';
+import { SamDynamicListColl } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-listColl-element';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -42,6 +44,12 @@ export class SamProfileSectionComponent implements OnInit {
     },
     'chips': function (configObj: any) {
       return new SamDynamicChips(configObj);
+    },
+    'chipsColl': function (configObj: any) {
+      return new SamDynamicChipsColl(configObj);
+    },
+    'listColl': function (configObj: any) {
+      return new SamDynamicListColl(configObj);
     }
   };
 

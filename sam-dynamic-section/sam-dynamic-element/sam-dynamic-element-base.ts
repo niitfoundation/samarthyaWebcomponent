@@ -6,6 +6,7 @@ export class SamDynamicElementBase<T>{
   order: number;
   elemType: string; // controlType
   dataDescriptor: Object;
+  block: number;
 
   constructor(elementConfig: {
     value?: T,
@@ -14,7 +15,8 @@ export class SamDynamicElementBase<T>{
     required?: boolean,
     order?: number,
     elemType?: string,
-    dataDescriptor?: Object
+    dataDescriptor?: Object,
+    block?: number,
   } = {}) {
     this.value = elementConfig.value;
     this.elemName = elementConfig.elemName || '';
@@ -23,5 +25,6 @@ export class SamDynamicElementBase<T>{
     this.order = elementConfig.order === undefined ? 1 : elementConfig.order;
     this.elemType = elementConfig.elemType || '';
     this.dataDescriptor = elementConfig.dataDescriptor || {};
+    this.block = elementConfig.block === undefined ? 1 : elementConfig.block;
   }
 }

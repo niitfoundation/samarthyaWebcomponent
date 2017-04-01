@@ -1,5 +1,5 @@
 <!--switch case for selecting element type-->
-<div fxLayout="row">
+<div fxLayout="row" fxLayoutWrap>
   <div [ngSwitch]="elementConfig.elemType">
 
     <!--===============================
@@ -8,13 +8,14 @@
 
     <!--this is the element for div with icon-->
     <div *ngSwitchCase="'icon-div'" title='{{elementConfig.dataDescriptor.info}}'>
-      <div fxLayout="row" class="elements">
-        <div fxFlex="40px" class="">
+      <div fxLayout="row" class="elements block">
+        <div fxFlex="30px" class="">
           <i class="material-icons">{{elementConfig.dataDescriptor.icon}}</i>
         </div>
         <div fxFlex class="dataText">
           {{fieldData}}
         </div>
+
       </div>
     </div>
 
@@ -31,29 +32,68 @@
       </div>
     </div>
 
-    <!--this is the element for div with title-->
-    <div *ngSwitchCase="'title-div'" title='{{elementConfig.dataDescriptor.info}}'>
-      <div fxLayout="row" class="elements">
-        <div fxFlex="150px">
-          <b>{{elementConfig.dataDescriptor.title}}</b>
-        </div>
-        <div fxFlex>
+    <!--this is the element for collection chips-->
+    <div *ngSwitchCase="'chipsColl'">
+      <div>
+        <md-chip-list>
+          <span *ngFor="let chip of fieldData"> 
+          <md-chip selected="true"  color="accent" class="chips" title="{{chip[1]}} yr">
+            <div class="chips">
+              <span *ngIf="chip[0]" class="chipText">{{chip[0]}}</span>
+          <span *ngIf="chip[1]" class="chipBatch">{{chip[1]}}</span>
+      </div>
+      </md-chip>
+      </span>
+      </md-chip-list>
+    </div>
+  </div>
+
+  <!--this is the element for collection of lists-->
+  <div *ngSwitchCase="'listColl'" fxLayout="row" fxLayoutWrap>
+    <md-list fxFlex>
+      <!--<md-divider></md-divider>-->
+      <div *ngFor="let list of fieldData">
+        <md-list-item class="list">
+          <div fxLayout="column">
+            <div class="listHead">{{list[0]}}</div>
+            <div class="listContent">
+              <span *ngIf="list[1]">{{list[1]}}</span>
+              <span *ngIf="list[2]">, {{list[2]}}</span>
+              <span *ngIf="list[3]">, {{list[3]}}</span>
+              <span *ngIf="list[4]">, {{list[4]}}</span>
+              <span *ngIf="list[5]">, {{list[5]}}</span>
+              <span *ngIf="list[6]">, {{list[6]}}</span>
+            </div>
+          </div>
+        </md-list-item>
+        <md-divider></md-divider>
+      </div>
+    </md-list>
+  </div>
+
+  <!--this is the element for div with title-->
+  <div *ngSwitchCase="'title-div'" title='{{elementConfig.dataDescriptor.info}}'>
+    <div fxLayout="row" class="elements">
+      <div fxFlex="150px">
+        <b>{{elementConfig.dataDescriptor.title}}</b>
+      </div>
+      <div fxFlex>
+        {{fieldData}}
+      </div>
+    </div>
+  </div>
+
+  <!--this is the element for text div only -->
+  <div *ngSwitchCase="'text-div'">
+    <div fxLayout="row" class="elements">
+      <div class="dataText">
+        <div class="labelText">{{elementConfig.dataDescriptor.label}} </div>
+        <div>
           {{fieldData}}
         </div>
       </div>
     </div>
-
-    <!--this is the element for text div only -->
-    <div *ngSwitchCase="'text-div'">
-      <div fxLayout="row" class="elements">
-        <div class="dataText">
-          <div class="labelText">{{elementConfig.dataDescriptor.label}} </div>
-          <div>
-            {{fieldData}}
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
+
+</div>
 </div>
