@@ -8,14 +8,13 @@
 
     <!--this is the element for div with icon-->
     <div *ngSwitchCase="'icon-div'" title='{{elementConfig.dataDescriptor.info}}'>
-      <div fxLayout="row" class="elements block">
+      <div *ngIf="fieldData" fxLayout="row" class="elements block">
         <div fxFlex="30px" class="">
           <i class="material-icons">{{elementConfig.dataDescriptor.icon}}</i>
         </div>
         <div fxFlex class="dataText">
           {{fieldData}}
         </div>
-
       </div>
     </div>
 

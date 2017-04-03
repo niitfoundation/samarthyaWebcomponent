@@ -74,7 +74,6 @@ export class SamDynamicElementComponent implements OnInit {
 
   // this is for nested array collections
   protected nestedCollArrayFieldResolver(elementData: any, fieldName: any) {
-    console.log(fieldName)
     elementData = elementData[fieldName.location];
     let elementDataArray: any[] = [];
     elementData.forEach((elemData: any) => {

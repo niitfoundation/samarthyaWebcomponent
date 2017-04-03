@@ -16,7 +16,7 @@ export class SamProfileCardComponent implements OnInit {
 
   ngOnInit() {
     this.cardData = this.profileCardData;
-    console.log(this.cardData);
+    // console.log(this.cardData);
   }
   public download(event: any) {
     console.log('asdasd');
