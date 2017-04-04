@@ -13,35 +13,53 @@ import { BrowserModule } from '@angular/platform-browser';
 import 'hammerjs';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Md2Module } from 'md2';
+import { ModuleWithProviders } from '@angular/core';
+import { SamProfileSectionConfigService } from './sam-profile/sam-profile-section/sam-profile-section-config.service';
+import { ProfileService } from './sam-profile/sam-profile-section/sam-profile-section-data.service';
+
+import { SamProfileCardService } from './sam-profile/sam-profile-card/sam-profile-card.service';
+
+
 
 @NgModule({
-	imports: [
-		BrowserModule,
-		FormsModule,
-		HttpModule,
-		MaterialModule.forRoot(),
-		Md2Module.forRoot(),
-		ReactiveFormsModule,
-		FlexLayoutModule,
-	],
-	declarations: [
-		SamProfileSectionComponent,
-		SamDynamicViewComponent,
-		SamDynamicFormComponent,
-		SamDynamicElementComponent,
-		SamDynamicFormElementComponent,
-		SamProfileCardComponent,
-		SamProfileSectionFormComponent
-	],
-	exports: [
-		SamProfileSectionComponent,
-		SamDynamicViewComponent,
-		SamDynamicFormComponent,
-		SamDynamicFormElementComponent,
-		SamDynamicElementComponent,
-		SamProfileCardComponent,
-		SamProfileSectionFormComponent
-	]
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    MaterialModule.forRoot(),
+    Md2Module.forRoot(),
+    ReactiveFormsModule,
+    FlexLayoutModule,
+  ],
+  declarations: [
+    SamProfileSectionComponent,
+    SamDynamicViewComponent,
+    SamDynamicFormComponent,
+    SamDynamicElementComponent,
+    SamDynamicFormElementComponent,
+    SamProfileCardComponent,
+    SamProfileSectionFormComponent,
+  ],
+  exports: [
+    SamProfileSectionComponent,
+    SamDynamicViewComponent,
+    SamDynamicFormComponent,
+    SamDynamicFormElementComponent,
+    SamDynamicElementComponent,
+    SamProfileCardComponent,
+    SamProfileSectionFormComponent,
+  ]
 })
 
-export class SamarthyaWebComponentsModule { }
+export class SamarthyaWebComponentsModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: SamarthyaWebComponentsModule,
+      providers: [
+        SamProfileCardService,
+        SamProfileSectionConfigService,
+        ProfileService
+      ]
+    }
+  }
+}
