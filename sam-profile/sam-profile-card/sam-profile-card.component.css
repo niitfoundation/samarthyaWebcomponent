@@ -1,64 +1,60 @@
 .right {
-    padding-right: 10px;
-    float: right;
-    margin: 5px;
+   padding-right: 10px;
+   float: right;
+   margin: 5px;
 }
 
 .card {
-    top: 60px;
-    max-width: 300px;
-    margin: auto;
-    background-color: white;
-    /*background: lavender*/
+   top: 60px;
+   max-width: 300px;
+   margin: auto;
+   background-color: white;
 }
 
 .name {
-    font-size: 35px;
-    font-weight: bold;
-    color: #56595e ;
-    text-shadow: 0px 0px 2px gray;
-    padding: 20px;
+   font-size: 35px;
+   font-weight: bold;
+   color: #56595e;
+   text-shadow: 0px 0px 2px gray;
+   padding: 20px;
 }
 
 .downloadCard {
-    width: 370px;
-    margin: auto;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    /*border: 2px solid gray;*/
-    /*box-shadow: 2px 2px 10px gray;*/
+   width: 370px;
+   margin: auto;
+   padding-top: 20px;
+   padding-bottom: 10px;
 }
 
 .text {
-    margin: auto;
+   margin: auto;
 }
 
 .img {
-    /*max-width: 200px;*/
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    margin-top: -100px;
+   width: 150px;
+   height: 150px;
+   border-radius: 100%;
+   margin-top: -100px;
 }
 
 .center {
-    margin: auto;
-    text-align: center;
+   margin: auto;
+   text-align: center;
 }
 
 h1 {
-    text-align: center;
+   text-align: center;
 }
 
 .material-icons {
-    color: gray;
-    font-size: 18px;
+   color: gray;
+   font-size: 18px;
 }
 
 md-chip {
-    min-width: 80px;
+   min-width: 80px;
 }
 
 .chipsIcon {
-    margin-top: 8px;
+   margin-top: 8px;
 }
