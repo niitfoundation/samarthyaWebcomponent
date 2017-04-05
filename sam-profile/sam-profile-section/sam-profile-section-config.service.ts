@@ -5,12 +5,12 @@ import { Http, Headers, Response, RequestOptions } from '@angular/http';
 
 @Injectable()
 export class SamProfileSectionConfigService {
-    sectionConfigColln: Object = {};
-    private viewConfigUrl: string = 'http://172.23.238.175:3010/ProfileSectionViewConfig';
-    private formConfigUrl: string = 'http://172.23.238.175:3010/ProfileSectionFormConfig';
+    // sectionConfigColln: Object = {};
+    // private viewConfigUrl: string = 'http://172.23.238.175:3010/ProfileSectionViewConfig';
+    // private formConfigUrl: string = 'http://172.23.238.175:3010/ProfileSectionFormConfig';
 
-    // private viewConfigUrl: string = 'http://localhost:3010/ProfileSectionViewConfig';
-    // private formConfigUrl: string = 'http://localhost:3010/ProfileSectionFormConfig';
+    private viewConfigUrl: string = 'http://localhost:3010/ProfileSectionViewConfig';
+    private formConfigUrl: string = 'http://localhost:3010/ProfileSectionFormConfig';
 
     constructor(private http: Http) {
         // make HTTP Call to get the section config data
