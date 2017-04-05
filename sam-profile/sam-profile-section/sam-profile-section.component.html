@@ -8,10 +8,10 @@
         <sam-dynamic-view [elementConfigColln]="sectionElements" [viewData]="sectionData" [alignElement]="alignElement" [viewTitle]="sectionTitle">
         </sam-dynamic-view>
     </md-card-content>
-    <md-card-actions>
-        <div fxLayout="row">
-            <div fxFlex></div>
-            <ng-content select="[editBtn]"></ng-content>
-        </div>
-    </md-card-actions>
+  <md-card-actions>
+    <div fxLayout="row">
+        <div fxFlex></div>
+        <ng-content select="[editBtn]"></ng-content>
+    </div>
+</md-card-actions>
 </md-card>

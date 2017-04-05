@@ -19,12 +19,6 @@
    padding: 20px;
 }
 
-.downloadCard {
-   width: 370px;
-   margin: auto;
-   padding-top: 20px;
-   padding-bottom: 10px;
-}
 
 .text {
    margin: auto;
@@ -57,4 +51,34 @@ md-chip {
 
 .chipsIcon {
    margin-top: 8px;
+}
+
+
+@media(min-width:10px){
+
+.downloadCard {
+   width: 300px;
+   margin: auto;
+   padding-top: 20px;
+   padding-bottom: 10px;
+}
+@media(min-width:321px){
+
+.downloadCard {
+   width: 350px;
+   margin: auto;
+   padding-top: 20px;
+   padding-bottom: 10px;
+}
+}
+
+@media(min-width:480px){
+
+.downloadCard {
+   width: 370px;
+   margin: auto;
+   padding-top: 20px;
+   padding-bottom: 10px;
+}
+}
 }

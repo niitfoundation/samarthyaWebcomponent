@@ -1,49 +1,4 @@
 
-.full-width {
-    width: 100%;
-    margin: auto;
-}
-.pull-right
-{
-    float: right;
-
-}
-.width-35
-{
-
-    width:35%;
-    margin:auto;
-
-}
-.width-75
-{
-    width:75%;
-    margin:auto;
-}
-.pull-left
-{
-    float: left;
-}
-
-.box-style
-{
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;  
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;  
-  box-shadow:         3px 3px 5px 6px #ccc; 
-
-  /*animation: blink 1s linear infinite;*/
-}
-
-@keyframes blink
-{
-    50%{
-
-    -webkit-box-shadow: 3px 3px 5px 6px #6d587a;  
-  -moz-box-shadow:    3px 3px 5px 6px #6d587a;  
-  box-shadow:         3px 3px 5px 6px #6d587a; 
-    }
-}
-
 .paddings
 {
   padding: 5px 1%;
@@ -53,7 +8,12 @@ md-card
 {
   width:25%;
 }
+.btn{
+  position: absolute;
+  bottom: 0px;
+  
 
+}
 
 .text-center
 {

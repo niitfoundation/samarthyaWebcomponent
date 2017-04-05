@@ -18,6 +18,18 @@
       </div>
     </div>
 
+    <!--this is the element for large text-->
+    <div *ngSwitchCase="'largeText'">
+      <div fxLayout="row" class="elements">
+        <div *ngIf="fieldData" fxFlex class="dataText">
+          {{fieldData}}
+        </div>
+        <div *ngIf="!fieldData" fxFlex class="dataText">
+          {{elementConfig.dataDescriptor.backupText}}
+        </div>
+      </div>
+    </div>
+
     <!--this is the element for chips-->
     <div *ngSwitchCase="'chips'">
       <div>
@@ -92,7 +104,7 @@
 
   <!--this is the element for div with title-->
   <div *ngSwitchCase="'title-div'" title='{{elementConfig.dataDescriptor.info}}'>
-    <div  *ngIf="fieldData"  fxLayout="row" class="elements block">
+    <div *ngIf="fieldData" fxLayout="row" class="elements block">
       <div fxFlex="170px" class="dataText">
         <b>{{elementConfig.dataDescriptor.title}}</b>
       </div>

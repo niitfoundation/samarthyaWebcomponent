@@ -1,32 +1,15 @@
-<!--<div class="container sized" fxLayoutAlign="center" fxLayoutGap.xs="0">
-    <div fxFlex fxFlexOffset.xs="0" class="box-style">
-        <div class="img">
-            <img src={{imgSrc}}>
-        </div>
-        <div class="highlight text-center"><br>
-            <h3>{{userName}} </h3>
-            <p class="size-sub">{{profession}}</p>
-
-        </div>
-        <div class="sub">
-            <h2>{{role}}<br> {{experience}}
-                <button md-mini-fab class="pull-right"><i class="material-icons">info</i></button>
-            </h2>
-        </div>
-    </div>
-</div>-->
-
 <md-card>
 
     <div class="container" fxLayout="row">
         <div fxFlex="100px">
-            <img src="{{imgSrc}}" alt="user Image">
+            <img src="{{thumb.imgSrc}}" alt="user Image">
         </div>
         <div fxFlex="200px" fxLayout="column" class="data">
-            <div fxFlex class="username">{{userName}}</div>
-            <div fxFlex class="profession"> {{profession}}</div>
-            <div fxFlex class="text"> {{role}} {{experience}}</div>
+            <div fxFlex class="username">{{thumb.userName}}</div>
+            <div fxFlex class="profession"> {{thumb.profession}}</div>
+            <div fxFlex class="text"> {{thumb.role}} {{thumb.experience}}</div>
         </div>
-
     </div>
+    <ng-content select="[openCard]"></ng-content>
+
 </md-card>

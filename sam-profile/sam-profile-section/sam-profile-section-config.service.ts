@@ -29,7 +29,6 @@ export class SamProfileSectionConfigService {
         return this.http.get(this.viewConfigUrl).map((response: Response) => response.json());
     };
 
-   
     // this function will get all config for FORM section
     // getProfileSectionFormConfig() {
     //     return this.http.get(this.formConfigUrl)

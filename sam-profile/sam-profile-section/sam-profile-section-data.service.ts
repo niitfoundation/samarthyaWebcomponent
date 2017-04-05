@@ -7,7 +7,6 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ProfileService {
-
   constructor(private http: Http, private router: Router) { }
 
   public getProfile(username: string) {
@@ -17,7 +16,7 @@ export class ProfileService {
       // console.log(profileData)
       let modifiedData = profileData['data'][0];
       modifiedData['personalInfo']['dob'] = modifiedData['personalInfo']['dob'].substr(0, 10) // modified DATE of BIRTH
-      modifiedData['qualifications'][0]['batch'] = modifiedData['qualifications'][0]['batch'].substr(0, 4) // modified Batch
+      // modifiedData['qualifications'][0]['batch'] = modifiedData['qualifications'][0]['batch'].substr(0, 4) // modified Batch
       console.log(modifiedData);
       if (modifiedData['jobPreferences']['looking']) {
         modifiedData['jobPreferences']['looking'] = 'Looking For Job';
