@@ -48,7 +48,7 @@
   </div>
 
   <!--this is the element for collection of lists-->
-  <div *ngSwitchCase="'listColl'" fxLayout="row" fxLayoutWrap>
+  <div *ngSwitchCase="'listColl'" fxLayout="row" class="listFull">
     <md-list fxFlex>
       <!--<md-divider></md-divider>-->
       <div *ngFor="let list of fieldData">
@@ -70,13 +70,33 @@
     </md-list>
   </div>
 
+  <!--this is the element for collection of lists-->
+  <div *ngSwitchCase="'listLang'" fxLayout="row">
+    <md-list fxFlex>
+      <!--<md-divider></md-divider>-->
+      <div *ngFor="let list of fieldData">
+        <md-list-item class="list">
+          <div fxLayout="column">
+            <div class="listHead">{{list[3]}}</div>
+            <div class="listContent">
+              <span *ngIf="list[0]"> {{list[0]}} </span>
+              <span *ngIf="list[1]"> {{list[1]}} </span>
+              <span *ngIf="list[2]"> {{list[2]}} </span>
+            </div>
+          </div>
+        </md-list-item>
+        <md-divider></md-divider>
+      </div>
+    </md-list>
+  </div>
+
   <!--this is the element for div with title-->
   <div *ngSwitchCase="'title-div'" title='{{elementConfig.dataDescriptor.info}}'>
-    <div fxLayout="row" class="elements">
-      <div fxFlex="150px">
+    <div fxLayout="row" class="elements block">
+      <div fxFlex="170px" class="dataText">
         <b>{{elementConfig.dataDescriptor.title}}</b>
       </div>
-      <div fxFlex>
+      <div fxFlex class="dataText">
         {{fieldData}}
       </div>
     </div>

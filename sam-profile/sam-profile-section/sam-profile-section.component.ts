@@ -5,6 +5,8 @@ import { SamDynamicDiv } from './../../sam-dynamic-section/sam-dynamic-element/v
 import { SamDynamicChips } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-chips-element';
 import { SamDynamicChipsColl } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-chipsColl-element';
 import { SamDynamicListColl } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-listColl-element';
+import { SamDynamicListLang } from './../../sam-dynamic-section/sam-dynamic-element/view-elements/sam-dynamic-listLang-element';
+
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -50,7 +52,10 @@ export class SamProfileSectionComponent implements OnInit {
     },
     'listColl': function (configObj: any) {
       return new SamDynamicListColl(configObj);
-    }
+    },
+    'listLang': function (configObj: any) {
+      return new SamDynamicListLang(configObj);
+    },
   };
 
   constructor() {

@@ -73,10 +73,18 @@ i{
  .block{
       width: 250px;
  }
+   .listFull{
+    /*min-width: 100%;*/
+    /*border: 2px solid black;*/
+}
 }
 
 @media(min-width:768px){
     .block{
-          width: 300px;
+          /*width: 300px;*/
     }
+    .listFull{
+    /*width: 400px;*/
+    /*border: 2px solid black;*/
+}
 }
