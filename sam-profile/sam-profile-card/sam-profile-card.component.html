@@ -1,26 +1,22 @@
-<div id="profileCard" class="downloadCard" *ngIf="profileCardData">
+<div id="profilecard" class="downloadCard">
+
     <md-card class="card">
         <md-card-title class="center">
             <!-- here’s the avatar -->
             <img src={{cardData.profilepic}} class="img">
-
             <!-- the username -->
-            <div class="name" title="User Name">
+            <div class="name">
                 {{cardData.name}}
             </div>
         </md-card-title>
         <hr>
         <div fxLayout="row">
-
-            <!--profession-->
             <div fxFlex="9" class="text">
                 <i class="material-icons">business_center</i>
             </div>
             <div fxFlex="25" class="text">
                 {{cardData.profession}}
             </div>
-
-            <!--Role-->
             <div fxFlex="9" class="text">
                 <i class="material-icons">event_available</i>
             </div>
@@ -29,17 +25,12 @@
             </div>
         </div>
         <br>
-
-        <!--experience-->
         <div fxLayout="row">
             <div fxFlex="9" class="text"><i class="material-icons">work</i>
             </div>
             <div fxFlex="25" class="text">
                 {{cardData.experience}} yr
             </div>
-
-
-            <!--currentCompany-->
             <div fxFlex="9" class="text">
                 <i class="material-icons">business</i>
             </div>
@@ -48,11 +39,7 @@
             </div>
         </div>
         <hr>
-
-        <!--second row-->
         <div fxLayout="row">
-
-            <!--location-->
             <div fxFlex="9" class="text">
                 <i class="material-icons">location_on</i>
             </div>
@@ -61,8 +48,6 @@
             </div>
         </div>
         <br>
-
-        <!--email-->
         <div fxLayout="row">
             <div fxFlex="9" class="text">
                 <i class="material-icons">email</i>
@@ -72,8 +57,6 @@
             </div>
         </div>
         <br>
-
-        <!--Phone No.-->
         <div fxLayout="row">
             <div fxFlex="9" class="text"><i class="material-icons">call</i>
             </div>
@@ -82,8 +65,6 @@
             </div>
         </div>
         <hr>
-
-        <!--skills set-->
         <div fxLayout="row">
             <div fxFlex="9" class=" chipsIcon text">
                 <i class="material-icons">library_books</i>
@@ -100,15 +81,17 @@
             </div>
         </div>
         <br>
-
-        <!-- action buttons for share and file_download -->
+        <!-- some social links to show off -->
         <md-card-actions>
             <div fxLayoutAlign="end">
-                <a md-icon-button>
+                <a md-icon-button (click)="share(event)">
                     <i class="material-icons">share</i>
                 </a>
-                <a md-icon-button id="downloadpc" (click)="download(event)">
-                    <i class="material-icons">file_download</i>
+
+                <a id="downloadpc">
+                    <a md-icon-button (click)="download(event)">
+                        <i class="material-icons">file_download</i>
+                    </a>
                 </a>
             </div>
         </md-card-actions>

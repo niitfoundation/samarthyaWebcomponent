@@ -4,53 +4,37 @@
     margin: 5px;
 }
 
-md-card {
+.card {
     top: 60px;
-    width: 300px;
+    max-width: 300px;
     margin: auto;
-    color: dimgray;
-}
-
-
-@media(min-width:10px) {
-    md-card {
-        width: 250px;
-    }
-    
-.downloadCard {
-    width: 270px;
-    margin: auto;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-
-}
-
-@media(min-width:370px) {
-    md-card {
-        width: 300px;
-    }
-    
-.downloadCard {
-    width: 370px;
-    margin: auto;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-
+    background-color: white;
+    /*background: lavender*/
 }
 
 .name {
     font-size: 35px;
     font-weight: bold;
-    color: dimgray;
+    color: #56595e ;
     text-shadow: 0px 0px 2px gray;
     padding: 20px;
 }
 
+.downloadCard {
+    width: 370px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    /*border: 2px solid gray;*/
+    /*box-shadow: 2px 2px 10px gray;*/
+}
+
+.text {
+    margin: auto;
+}
+
 .img {
+    /*max-width: 200px;*/
     width: 150px;
     height: 150px;
     border-radius: 100%;
@@ -67,12 +51,14 @@ h1 {
 }
 
 .material-icons {
-    color: dimgray;
+    color: gray;
     font-size: 18px;
 }
 
 md-chip {
     min-width: 80px;
-    text-align: center;
-    margin: 1px;
+}
+
+.chipsIcon {
+    margin-top: 8px;
 }

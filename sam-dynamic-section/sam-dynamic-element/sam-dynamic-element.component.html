@@ -92,7 +92,7 @@
 
   <!--this is the element for div with title-->
   <div *ngSwitchCase="'title-div'" title='{{elementConfig.dataDescriptor.info}}'>
-    <div fxLayout="row" class="elements block">
+    <div  *ngIf="fieldData"  fxLayout="row" class="elements block">
       <div fxFlex="170px" class="dataText">
         <b>{{elementConfig.dataDescriptor.title}}</b>
       </div>
