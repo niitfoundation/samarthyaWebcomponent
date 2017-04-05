@@ -88,10 +88,13 @@ export class SamDynamicElementComponent implements OnInit {
       }
       elementDataArray.push(arr);
     });
+
+    console.log(fieldName);
+    console.log(elementDataArray);
     return elementDataArray
   }
 
- // this is for section starts with an Object with collection
+  // this is for section starts with an Object with collection
   protected collObjFieldResolver(elementData: any, fieldName: any) {
     elementData = elementData[fieldName.location];
     let elementDataArray: any[] = [];
