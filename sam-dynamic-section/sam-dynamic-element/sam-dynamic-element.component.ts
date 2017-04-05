@@ -89,9 +89,8 @@ export class SamDynamicElementComponent implements OnInit {
       }
       elementDataArray.push(arr);
     });
-
-    console.log(fieldName);
-    console.log(elementDataArray);
+    // console.log(fieldName);
+    // console.log(elementDataArray);
     return elementDataArray
   }
 

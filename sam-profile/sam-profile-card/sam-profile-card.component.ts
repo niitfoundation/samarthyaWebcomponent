@@ -18,19 +18,20 @@ export class SamProfileCardComponent implements OnInit {
     this.cardData = this.profileCardData;
     // console.log(this.cardData);
   }
-  public download(event: any) {
-    console.log('asdasd');
-    var timeStamp = new Date().getTime();
-    console.log(timeStamp);
-    console.log(event)
-    var name = "samarthya_" + this.cardData['name'] + timeStamp + ".png";
-    html2canvas(document.getElementById("profilecard")).then(function (canvas) {
+  public download() {
+    this.downloadCard(event);
+  }
+
+  public downloadCard(event: any) {
+    let timeStamp = new Date().getTime();
+    let name = 'samarthya_' + this.cardData['name'] + timeStamp + '.png';
+    html2canvas(document.getElementById('profilecard')).then(function (canvas) {
       console.log('called')
-      var imageData = canvas.toDataURL("image/png");
-      var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
-      var dwld = document.getElementById("downloadpc");
-      dwld.setAttribute("download", name);
-      dwld.setAttribute("href", newData);
+      let imageData = canvas.toDataURL('image/png');
+      let newData = imageData.replace(/^data:image\/png/, 'data:application/octet-stream');
+      let dwld = document.getElementById('downloadpc');
+      dwld.setAttribute('download', name);
+      dwld.setAttribute('href', newData);
     });
   }
 }
