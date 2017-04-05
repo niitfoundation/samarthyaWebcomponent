@@ -24,7 +24,6 @@
    margin: auto;
    padding-top: 20px;
    padding-bottom: 10px;
- 
 }
 
 .text {
@@ -36,34 +35,7 @@
    height: 150px;
    border-radius: 100%;
    margin-top: -100px;
-    top: 60px;
-    max-width: 300px;
-    margin: auto;
-    background-color: white;
-    /*background: lavender*/
 }
-
-.name {
-    font-size: 35px;
-    font-weight: bold;
-    color: #56595e ;
-    text-shadow: 0px 0px 2px gray;
-    padding: 20px;
-}
-
-.downloadCard {
-    width: 370px;
-    margin: auto;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    /*border: 2px solid gray;*/
-    /*box-shadow: 2px 2px 10px gray;*/
-}
-
-.text {
-    margin: auto;
-}
-
 
 .center {
    margin: auto;
@@ -75,14 +47,14 @@ h1 {
 }
 
 .material-icons {
-    color: gray;
-    font-size: 18px;
+   color: gray;
+   font-size: 18px;
 }
 
 md-chip {
-    min-width: 80px;
+   min-width: 80px;
 }
 
 .chipsIcon {
-    margin-top: 8px;
+   margin-top: 8px;
 }
