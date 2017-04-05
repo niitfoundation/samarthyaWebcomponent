@@ -1,0 +1,135 @@
+.full-width {
+    width: 100%;
+    margin: auto;
+}
+.pull-right
+{
+    float: right;
+
+}
+.width-35
+{
+
+    width:35%;
+    margin:auto;
+
+}
+.width-75
+{
+    width:75%;
+    margin:auto;
+}
+.pull-left
+{
+    float: left;
+}
+.img-size
+{
+  width:95%;
+  padding: 3px;
+    border-radius: 50%;
+}
+.box-style
+{
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;  
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  
+  box-shadow:         3px 3px 5px 6px #ccc; 
+
+  /*animation: blink 1s linear infinite;*/
+}
+
+@keyframes blink
+{
+    50%{
+
+    -webkit-box-shadow: 3px 3px 5px 6px #6d587a;  
+  -moz-box-shadow:    3px 3px 5px 6px #6d587a;  
+  box-shadow:         3px 3px 5px 6px #6d587a; 
+    }
+}
+
+.paddings
+{
+  padding: 5px 1%;
+
+}
+md-card
+{
+  width:25%;
+}
+.text-details
+{
+  margin: auto;
+}
+.sized
+{
+  width:350px;
+ 
+
+}
+
+.highlight
+{
+  border-bottom: 2px solid black;
+  background: green;
+  width:100%;
+  
+}
+
+@media (max-width: 400px) {
+.img-size
+{
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+}
+
+    
+    .sized
+    {
+      width:95%;
+      margin: auto;
+    }
+}
+
+@media (max-width: 551px) {
+.img-size
+{
+  width:125px;
+  height:125px;
+  border-radius: 50%;
+}
+.sized
+{
+  width:95%;
+  margin:auto;
+}
+    
+}
+
+.img
+{
+  width:40%;
+}
+h4
+{
+  top:0px;
+  margin:0px;
+  font-size:20px;
+  text-align: center;
+  font-weight:normal;
+}
+h3,p
+{
+top:0px;
+margin:0px 2px;
+font-size:25px;
+}
+.size-sub
+{
+  font-size:20px;
+}
+.text-center
+{
+  text-align: center;
+}

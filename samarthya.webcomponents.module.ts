@@ -5,6 +5,7 @@ import { SamDynamicFormComponent } from './sam-dynamic-section/sam-dynamic-form/
 import { SamProfileSectionComponent } from './sam-profile/sam-profile-section/sam-profile-section.component';
 import { SamProfileSectionFormComponent } from './sam-profile/sam-profile-section-form/sam-profile-section-form.component';
 import { SamProfileCardComponent } from './sam-profile/sam-profile-card/sam-profile-card.component';
+import { SamProfileThumbnail } from './sam-profile/sam-profile-thumbnail/sam-profile-thumbnail.component';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from '@angular/material';
 import { HttpModule } from '@angular/http';
@@ -38,6 +39,7 @@ import { SamProfileCardService } from './sam-profile/sam-profile-card/sam-profil
     SamDynamicElementComponent,
     SamDynamicFormElementComponent,
     SamProfileCardComponent,
+    SamProfileThumbnail,
     SamProfileSectionFormComponent,
   ],
   exports: [
@@ -47,6 +49,7 @@ import { SamProfileCardService } from './sam-profile/sam-profile-card/sam-profil
     SamDynamicFormElementComponent,
     SamDynamicElementComponent,
     SamProfileCardComponent,
+    SamProfileThumbnail,
     SamProfileSectionFormComponent,
   ]
 })

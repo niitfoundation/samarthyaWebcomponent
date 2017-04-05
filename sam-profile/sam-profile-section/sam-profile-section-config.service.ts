@@ -9,33 +9,31 @@ export class SamProfileSectionConfigService {
     // private viewConfigUrl: string = 'http://172.23.238.175:3010/ProfileSectionViewConfig';
     // private formConfigUrl: string = 'http://172.23.238.175:3010/ProfileSectionFormConfig';
 
-    private viewConfigUrl: string = 'http://localhost:3010/ProfileSectionViewConfig';
-    private formConfigUrl: string = 'http://localhost:3010/ProfileSectionFormConfig';
+    // private viewConfigUrl: string = 'http://localhost:3010/ProfileSectionViewConfig';
+    // private formConfigUrl: string = 'http://localhost:3010/ProfileSectionFormConfig';
+
+    // url to get langauges
+    private viewConfigUrl = 'resources/sectionConfig';
+
+
 
     constructor(private http: Http) {
         // make HTTP Call to get the section config data
         // As this is a service, we assume this code is called only once,
         // hence don't have to go to server to get the configurations for profile sections
     }
-
-    // for composite and nested type of values
-    // dataFieldName :{
-    //     "type":"conposite/nested",
-    //     "fields" :['field1','field2'],
-    //     "delimiter":' '/' ,';
-    // }
-
-
     // this fuction will get all config for VIEW sections
-    getProfileSectionConfig() {
-        return this.http.get(this.viewConfigUrl)
-            .map((response: Response) => response.json());
-    }
 
+    // get json data for langauges
+    getProfileSectionConfig() {
+        return this.http.get(this.viewConfigUrl).map((response: Response) => response.json());
+    };
+
+   
     // this function will get all config for FORM section
-    getProfileSectionFormConfig() {
-        return this.http.get(this.formConfigUrl)
-            .map((response: Response) => response.json());
-    }
+    // getProfileSectionFormConfig() {
+    //     return this.http.get(this.formConfigUrl)
+    //         .map((response: Response) => response.json());
+    // }
 
 }
