@@ -71,25 +71,32 @@
             </div>
             <div fxFlex="91">
                 <div class="text chips" fxLayout="row" fxLayoutWrap>
-                    <md-chip-list class="mat-chip-list-stacked" fxFlex>
-                        <md-chip *ngFor="let skill of cardData.skills">
-                            <div fxFlex>{{skill.name}}
-                            </div>
-                        </md-chip>
-                    </md-chip-list>
+
+
+                    <md-chip-list>
+                        <span *ngFor="let skill of cardData.skills"> 
+          <md-chip selected="true"  color="accent" class="chips" title="{{skill.experience}} yr">
+            <div class="chips">
+              <span *ngIf="skill.name" class="chipText">{{skill.name}}</span>
+                        <span *ngIf="skill.experience" class="chipBatch">{{skill.experience}}</span>
                 </div>
+                </md-chip>
+                </span>
+                </md-chip-list>
+
             </div>
         </div>
-        <br>
-        <!-- some social links to show off -->
-        <md-card-actions>
-            <div fxLayoutAlign="end">
-                <a id="downloadpc">
-                    <a md-icon-button (click)="download(event)">
-                        <i class="material-icons">file_download</i>
-                    </a>
-                </a>
-            </div>
-        </md-card-actions>
-    </md-card>
+</div>
+<br>
+<!-- some social links to show off -->
+<md-card-actions>
+    <div fxLayoutAlign="end">
+        <a id="downloadpc">
+            <a md-icon-button (click)="download(event)">
+                <i class="material-icons">file_download</i>
+            </a>
+        </a>
+    </div>
+</md-card-actions>
+</md-card>
 </div>

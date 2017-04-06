@@ -15,10 +15,6 @@ export class SamProfileCardService {
     return this.http.get('/profile?username=' + username).map((response: Response) => {
       profileData = response.json();
       profileData = profileData['data'][0];
-      let skills: any[] = [];
-      profileData.skills.forEach((element: any) => {
-        skills.push(element.name);
-      });
 
       let samCardData = {
         profilepic: './../../' + profileData.profilePic,
@@ -29,7 +25,7 @@ export class SamProfileCardService {
         mobileNumber: profileData.personalInfo.contact.I,
         currentCompany: '',
         experience: '',
-        skills: skills,
+        skills: profileData.skills,
         location: profileData.personalInfo.address.district + ', ' + profileData.personalInfo.address.pincode,
       };
       return samCardData;
