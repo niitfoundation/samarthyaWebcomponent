@@ -48,10 +48,10 @@
       <div>
         <md-chip-list>
           <span *ngFor="let chip of fieldData"> 
-          <md-chip selected="true"  color="accent" class="chips" title="{{chip[1]}} yr">
+          <md-chip selected="true"  color="accent" class="chips" title="{{chip[0]}} yr">
             <div class="chips">
-              <span *ngIf="chip[0]" class="chipText">{{chip[0]}}</span>
-          <span *ngIf="chip[1]" class="chipBatch">{{chip[1]}}</span>
+              <span *ngIf="chip[1]" class="chipText">{{chip[1]}}</span>
+          <span *ngIf="chip[0]" class="chipBatch">{{chip[0]}}</span>
       </div>
       </md-chip>
       </span>

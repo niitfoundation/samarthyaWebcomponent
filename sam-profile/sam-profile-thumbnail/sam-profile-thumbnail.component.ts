@@ -7,11 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SamProfileThumbnail implements OnInit {
 
-  @Input() thumb: any
+  @Input() thumb: any;
+  public image: any;
 
   constructor() { }
 
   ngOnInit() {
+    this.image = './../../assets/img/' + this.thumb.gender + '.jpg';
   }
   click() {
 

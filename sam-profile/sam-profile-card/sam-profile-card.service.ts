@@ -15,16 +15,41 @@ export class SamProfileCardService {
     return this.http.get('/profile?username=' + username).map((response: Response) => {
       profileData = response.json();
       profileData = profileData['data'][0];
+      console.log(profileData);
+      let workplace: any;
+      let experience: any;
+      let role: any;
+      let exp: any;
+      if (profileData.experiences.length > 0) {
+        workplace = profileData.experiences[0]['workplace'];
+        let expYear = profileData.experiences[0].duration.end.substr(0, 4) - profileData.experiences[0].duration.start.substr(0, 4);
 
+        exp = expYear * 12 - -profileData.experiences[0].duration.end.substr(5, 2) - profileData.experiences[0].duration.start.substr(5, 2)
+        console.log(exp);
+
+        experience = exp + ' mon';
+      }
+      else {
+        experience = '';
+        workplace = '';
+        experience = '';
+      }
+
+      if (profileData.jobPreferences.jobRoles.length > 0) {
+        role = profileData.jobPreferences.jobRoles[0].name;
+      } else {
+        role = '';
+      }
+      console.log(profileData.profilePic);
       let samCardData = {
         profilepic: './../../' + profileData.profilePic,
         name: profileData.personalInfo.name,
         email: profileData.personalInfo.email,
-        profession: '',
-        role: profileData.profession.toUpperCase(),
+        role: role,
+        profession: profileData.profession.toUpperCase(),
         mobileNumber: profileData.personalInfo.contact.I,
-        currentCompany: '',
-        experience: '',
+        currentCompany: workplace,
+        experience: experience,
         skills: profileData.skills,
         location: profileData.personalInfo.address.district + ', ' + profileData.personalInfo.address.pincode,
       };

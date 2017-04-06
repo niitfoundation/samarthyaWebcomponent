@@ -2,12 +2,12 @@
 
     <div class="container" fxLayout="row">
         <div fxFlex="100px">
-            <img src="{{thumb.imgSrc}}" alt="user Image">
+            <img src="{{image}}" alt="user Image">
         </div>
         <div fxFlex="200px" fxLayout="column" class="data">
-            <div fxFlex class="username">{{thumb.userName}}</div>
+            <div fxFlex class="username">{{thumb.displayName}}</div>
             <div fxFlex class="profession"> {{thumb.profession}}</div>
-            <div fxFlex class="text"> {{thumb.role}} {{thumb.experience}}</div>
+            <div fxFlex class="text"> {{thumb.email}}</div>
         </div>
     </div>
     <ng-content select="[openCard]"></ng-content>

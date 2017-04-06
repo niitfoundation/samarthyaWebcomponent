@@ -67,7 +67,7 @@ export class SamDynamicElementComponent implements OnInit {
         });
       }
       // If the array is comming reverse just toggle this
-      elementDataArray.push(arr);
+      elementDataArray.push(arr.reverse());
     });
     return elementDataArray
     // return fieldDataArray;

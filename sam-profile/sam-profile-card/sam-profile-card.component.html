@@ -3,7 +3,9 @@
     <md-card class="card">
         <md-card-title class="center">
             <!-- here’s the avatar -->
-            <img src='https://eliaslealblog.files.wordpress.com/2014/03/user-200.png' class="img">
+            <!--<img src='https://eliaslealblog.files.wordpress.com/2014/03/user-200.png' class="img">-->
+            <img src={{cardData.profilepic}} class="img">
+
             <!-- the username -->
             <div class="name">
                 {{cardData.name}}
@@ -15,13 +17,13 @@
                 <i class="material-icons">business_center</i>
             </div>
             <div fxFlex="25" class="text">
-                {{cardData.profession}}
+                {{cardData.role}}
             </div>
             <div fxFlex="9" class="text">
                 <i class="material-icons">event_available</i>
             </div>
             <div fxFlex class="text">
-                {{cardData.role}}
+                {{cardData.profession}}
             </div>
         </div>
         <br>
@@ -29,7 +31,7 @@
             <div fxFlex="9" class="text"><i class="material-icons">work</i>
             </div>
             <div fxFlex="25" class="text">
-                {{cardData.experience}} yr
+                {{cardData.experience}}
             </div>
             <div fxFlex="9" class="text">
                 <i class="material-icons">business</i>
