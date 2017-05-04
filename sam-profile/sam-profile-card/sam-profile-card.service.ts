@@ -12,10 +12,9 @@ export class SamProfileCardService {
 
   public getProfileCard(username: string) {
     let profileData: any;
-    return this.http.get('/profile?username=' + username).map((response: Response) => {
+    return this.http.get('/profile?username=' + username +"&token="+JSON.parse(localStorage.getItem('currentUser'))['token']).map((response: Response) => {
       profileData = response.json();
       profileData = profileData['data'][0];
-      console.log(profileData);
       let workplace: any;
       let experience: any;
       let role: any;
@@ -40,7 +39,6 @@ export class SamProfileCardService {
       } else {
         role = '';
       }
-      console.log(profileData.profilePic);
       let samCardData = {
         profilepic: './../../' + profileData.profilePic,
         name: profileData.personalInfo.name,

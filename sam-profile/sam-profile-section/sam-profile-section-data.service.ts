@@ -11,7 +11,7 @@ export class ProfileService {
 
   public getProfile(username: string) {
     let profileData: any;
-    return this.http.get('/profile?username=' + username).map((response: Response) => {
+    return this.http.get('/profile?username=' + username+'&token='+JSON.parse(localStorage.getItem('currentUser'))['token']).map((response: Response) => {
       profileData = response.json();
       // console.log(profileData)
       let modifiedData = profileData['data'][0];
@@ -24,8 +24,6 @@ export class ProfileService {
         job.availablefrom = job.availablefrom.substr(0,10);
         });
       }
-
-      console.log(modifiedData);
       if (modifiedData['jobPreferences']['looking']) {
         modifiedData['jobPreferences']['looking'] = 'Looking For Job';
       } else {
