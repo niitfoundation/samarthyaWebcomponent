@@ -14,6 +14,21 @@
         <hr>
         <div fxLayout="row">
             <div fxFlex="9" class="text">
+                <i class="material-icons">assignment_ind</i>
+            </div>
+            <div fxFlex="25" class="text">
+                {{cardData.regNumber}}
+            </div>
+            <div fxFlex="9" class="text">
+                <i class="material-icons">filter_center_focus</i>
+            </div>
+            <div fxFlex class="text">
+                {{cardData.center}}
+            </div>
+        </div>
+        <hr>
+        <div fxLayout="row">
+            <div fxFlex="9" class="text">
                 <i class="material-icons">business_center</i>
             </div>
             <div fxFlex="25" class="text">
@@ -93,6 +108,7 @@
 <!-- some social links to show off -->
 <md-card-actions>
     <div fxLayoutAlign="end">
+    <ng-content select="[editPic]"></ng-content>
         <a id="downloadpc">
             <a md-icon-button (click)="download(event)">
                 <i class="material-icons">file_download</i>
