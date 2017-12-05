@@ -25,7 +25,6 @@ export class SamProfileCardService {
 
         exp = expYear * 12 - -profileData.experiences[0].duration.end.substr(5, 2) - profileData.experiences[0].duration.start.substr(5, 2)
         console.log(exp);
-
         experience = exp + ' mon';
       }
       else {
@@ -42,6 +41,8 @@ export class SamProfileCardService {
       let samCardData = {
         profilepic: './../../' + profileData.profilePic,
         name: profileData.personalInfo.name,
+        regNumber: profileData.personalInfo.identity[1].value,
+        center: profileData.centerCode,
         email: profileData.personalInfo.email,
         role: role,
         profession: profileData.profession.toUpperCase(),
