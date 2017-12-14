@@ -10,13 +10,13 @@ export class SamProfileCardComponent implements OnInit {
   @Input() profileCardData: Object;
 
   public cardData: Object;
-
+  public regNumber: any;
   constructor() {
   }
 
   ngOnInit() {
     this.cardData = this.profileCardData;
-    // console.log(this.cardData);
+    console.log(this.cardData)
   }
   public download() {
     this.downloadCard(event);
@@ -27,7 +27,7 @@ export class SamProfileCardComponent implements OnInit {
     let name = 'samarthya_' + this.cardData['name'] + timeStamp + '.png';
     html2canvas(document.getElementById('profilecard')).then(function (canvas) {
       console.log('called')
-      let imageData = canvas.toDataURL('image/png');
+      let imageData = canvas.toDataURL('image/png'); // to be checked as it only allows png images
       let newData = imageData.replace(/^data:image\/png/, 'data:application/octet-stream');
       let dwld = document.getElementById('downloadpc');
       dwld.setAttribute('download', name);

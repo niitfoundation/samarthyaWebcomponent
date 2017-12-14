@@ -39,7 +39,7 @@ export class SamProfileCardService {
         role = '';
       }
       let samCardData = {
-        profilepic: './../../' + profileData.profilePic,
+        profilepic: profileData.profilePic,
         name: profileData.personalInfo.name,
         regNumber: profileData.personalInfo.identity[1].value,
         center: profileData.centerCode,

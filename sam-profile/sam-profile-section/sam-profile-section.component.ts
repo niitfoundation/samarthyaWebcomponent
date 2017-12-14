@@ -74,6 +74,8 @@ export class SamProfileSectionComponent implements OnInit {
       (fieldConfigObj: any) => {
         let elementBuilderClosure = this.elementBuilders[fieldConfigObj.elemType];
         if (elementBuilderClosure) {
+          console.log(fieldConfigObj);
+          console.log(elementBuilderClosure);
           return elementBuilderClosure(fieldConfigObj);
         }
       }
